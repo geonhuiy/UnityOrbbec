@@ -1,7 +1,9 @@
 # UnityOrbbec
-Project repository for a Unity-based 3-D motion controlled game/platform designed for the elderly.
-### How to replicate
-### How to use
+Project repository for a Unity-based 3-D motion controlled game/platform designed for the elderly.  
+### How to replicate  
+Placeholder  
+### How to use  
+Placeholder  
 ### Setting up GitLab for Continuous Integration/Deployment
 1. Setting up GitLab Runner
   - Install GitLab Runner on GNU/Linux, macOS, FreeBSD, Windows. Detailed instructions can be found under:  
