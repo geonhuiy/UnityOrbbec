@@ -4,11 +4,15 @@ stages:
 unit-test:
   stage: test
   script: echo 'Testing'
-  tags: - Unity
+  tags: 
+    - Unity
+    - Orbbec
 
 unity-build:
   stage: build
   script: echo 'Building'
-  tags: - Unity
+  tags: 
+    - Unity
+    - Orbbec
 
 
