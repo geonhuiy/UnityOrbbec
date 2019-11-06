@@ -1,0 +1,14 @@
+stages:
+  - test
+  - build
+  - deploy
+unit-test:
+  stage: test
+  script: echo 'Testing...'
+unity-build:
+  stage: build
+  script: echo 'Building...'
+playstore:
+  stage: deploy
+  script: echo 'Deploying...'
+
