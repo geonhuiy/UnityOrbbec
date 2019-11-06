@@ -1,14 +1,13 @@
 stages:
   - test
   - build
-  - deploy
 unit-test:
   stage: test
-  script: echo 'Testing...'
+  script: echo 'Testing'
+  tags: - Unity - Orbbec
+
 unity-build:
   stage: build
-  script: echo 'Building...'
-playstore:
-  stage: deploy
-  script: echo 'Deploying...'
+  script: echo 'Building'
+  tags: - Unity - Orbbec
 
