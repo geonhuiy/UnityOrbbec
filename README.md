@@ -1,7 +1,9 @@
 # UnityOrbbec
 Project repository for a Unity-based 3-D motion controlled game/platform designed for the elderly.  
 ### How to replicate  
-Placeholder  
+1. Clone the repository  
+  ```git clone```  
+  or download the project files.  
 ### How to use  
 Placeholder  
 ### Setting up GitLab for Continuous Integration/Deployment
