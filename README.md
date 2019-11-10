@@ -1,12 +1,14 @@
 # UnityOrbbec
 > Project repository for a Unity-based 3-D motion controlled game/platform designed for the elderly.  
 ## Table of Contents  
- * [Getting started](#getting-started)   
+ * [Getting Started](#getting-started)   
    * [Prerequisites](#prerequisites)  
    * [Installing](#installing)
+ * [Running Tests](#running-tests)
+   * [Setting up GitLab for Continuous Integration/Deployment](#setting-up-gitlab-for-continuous-integration/deployment)
  * [Deployment](#deployment)  
  
-## Getting started  
+## Getting Started  
 ### Prerequisites   
   - Unity  
   
@@ -21,8 +23,8 @@
 1. Clone the repository  
   ```git clone```  
   or download the project files.  
-## Deployment  
-Placeholder  
+
+## Running Tests
 ### Setting up GitLab for Continuous Integration/Deployment
 1. Setting up GitLab Runner
   - Install GitLab Runner on GNU/Linux, macOS, FreeBSD, Windows. Detailed instructions can be found under:  
@@ -30,4 +32,7 @@ Placeholder
   - Register installed Runner  
     > https://docs.gitlab.com/runner/register/  
     > Runner tags should include 'Unity' and/or 'Orbbec'  
-    > Choose 'shell' for executor when prompt during Runner registration
+    > Choose 'shell' for executor when prompt during Runner registration  
+    
+## Deployment  
+Placeholder  
