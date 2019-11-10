@@ -14,15 +14,12 @@
   
   Download Unity Hub from  
   https://unity3d.com/get-unity/download  
-  ```
-  Unity 2019.211f1 was used to create this project.  
+  >Unity 2019.211f1 was used to create this project.  
   After the installation is complete, open Unity Hub and add Unity 2019.211f1 under Installs - Add.  
   Add "Android Build Support" module.
-  ```
+  
 ### Installing  
-1. Clone the repository  
-  ```git clone```  
-  or download the project files.  
+ - Clone the repo to your local machine from ```https://github.com/geonhuiy/UnityOrbbec.git```
 
 ## Running Tests
 ### Setting up GitLab for Continuous Integration
