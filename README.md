@@ -1,11 +1,11 @@
 # UnityOrbbec
 Project repository for a Unity-based 3-D motion controlled game/platform designed for the elderly.  
 ## Getting started  
-### Prerequisites  
-1. Unity  
-  ```
+### Prerequisites   
+  - Unity  
   Download Unity Hub from  
   https://unity3d.com/get-unity/download  
+  ```
   Unity 2019.211f1 was used to create this project.  
   After the installation is complete, open Unity Hub and add Unity 2019.211f1 under Installs - Add.  
   Add "Android Build Support" module.
