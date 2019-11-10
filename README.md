@@ -5,7 +5,7 @@
    * [Prerequisites](#prerequisites)  
    * [Installing](#installing)
  * [Running Tests](#running-tests)
-   * [Setting up GitLab for Continuous Integration/Deployment](#setting-up-gitlab-for-continuous-integration-deployment)
+   * [Setting up GitLab for Continuous Integration/Deployment](#setting-up-gitlab-for-continuous-integration)
  * [Deployment](#deployment)  
  
 ## Getting Started  
@@ -25,7 +25,7 @@
   or download the project files.  
 
 ## Running Tests
-### Setting up GitLab for Continuous Integration/Deployment
+### Setting up GitLab for Continuous Integration
 1. Setting up GitLab Runner
   - Install GitLab Runner on GNU/Linux, macOS, FreeBSD, Windows. Detailed instructions can be found under:  
     > https://docs.gitlab.com/runner/install/  
