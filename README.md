@@ -19,7 +19,8 @@
   Add "Android Build Support" module.
   
 ### Installing  
- - Clone the repo to your local machine from ```https://github.com/geonhuiy/UnityOrbbec.git```
+ - Clone the repo to your local machine  
+ ```git clone https://github.com/geonhuiy/UnityOrbbec.git```
 
 ## Running Tests
 ### Setting up GitLab for Continuous Integration
