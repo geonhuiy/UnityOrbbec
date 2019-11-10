@@ -5,7 +5,7 @@
    * [Prerequisites](#prerequisites)  
    * [Installing](#installing)
  * [Running Tests](#running-tests)
-   * [Setting up GitLab for Continuous Integration/Deployment](#setting-up-gitlab-for-continuous-integration/deployment)
+   * [Setting up GitLab for Continuous Integration/Deployment](#setting-up-gitlab-for-continuous-integration-deployment)
  * [Deployment](#deployment)  
  
 ## Getting Started  
