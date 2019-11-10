@@ -1,5 +1,7 @@
 # UnityOrbbec
-Project repository for a Unity-based 3-D motion controlled game/platform designed for the elderly.  
+> Project repository for a Unity-based 3-D motion controlled game/platform designed for the elderly.  
+## Table of Contents  
+ - [Prerequisites](#prerequisites)  
 ## Getting started  
 ### Prerequisites   
   - Unity  
@@ -15,7 +17,7 @@ Project repository for a Unity-based 3-D motion controlled game/platform designe
 1. Clone the repository  
   ```git clone```  
   or download the project files.  
-### How to use  
+### Deployment  
 Placeholder  
 ### Setting up GitLab for Continuous Integration/Deployment
 1. Setting up GitLab Runner
