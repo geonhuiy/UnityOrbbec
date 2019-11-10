@@ -1,7 +1,12 @@
 # UnityOrbbec
 Project repository for a Unity-based 3-D motion controlled game/platform designed for the elderly.  
 ### How to replicate  
-1. Clone the repository  
+1. Download Unity Hub
+  > https://unity3d.com/get-unity/download  
+  Unity 2019.211f1 was used to create this project.  
+  After the installation is complete, open Unity Hub and add Unity 2019.211f1 under Installs - Add.  
+  Add "Android Build Support" module.
+2. Clone the repository  
   ```git clone```  
   or download the project files.  
 ### How to use  
