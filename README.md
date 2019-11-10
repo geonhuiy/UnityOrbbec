@@ -3,6 +3,7 @@ Project repository for a Unity-based 3-D motion controlled game/platform designe
 ## Getting started  
 ### Prerequisites   
   - Unity  
+  
   Download Unity Hub from  
   https://unity3d.com/get-unity/download  
   ```
