@@ -1,0 +1,18 @@
+stages:
+  - test
+  - build
+unit-test:
+  stage: test
+  script: echo 'Testing'
+  tags: 
+    - Unity
+    - Orbbec
+
+unity-build:
+  stage: build
+  script: echo 'Building'
+  tags: 
+    - Unity
+    - Orbbec
+
+
