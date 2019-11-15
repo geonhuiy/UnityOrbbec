@@ -65,44 +65,47 @@
      <Compile Include="Assets\Scripts\Astra Scripts\TimerHistory.cs" />
      <Compile Include="Assets\Scripts\Astra Scripts\ToggleRenderer.cs" />
      <Compile Include="Assets\Scripts\Astra Scripts\UIConsoleLogger.cs" />
+     <Compile Include="Assets\Scripts\Destroyer.cs" />
      <Compile Include="Assets\Scripts\GameHandler.cs" />
+     <Compile Include="Assets\Scripts\ScoreCheck.cs" />
      <Compile Include="Assets\Scripts\TestScript.cs" />
+     <Compile Include="Assets\Scripts\spawn.cs" />
      <None Include="Assets\Materials\Nv21Render.shader" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>J:/Testing/New Unity Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>J:/Test/UnityOrbbec/New Unity Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>J:/Testing/New Unity Project/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>J:/Test/UnityOrbbec/New Unity Project/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>J:/Testing/New Unity Project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>J:/Test/UnityOrbbec/New Unity Project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>J:/Testing/New Unity Project/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>J:/Test/UnityOrbbec/New Unity Project/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>J:/Testing/New Unity Project/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>J:/Test/UnityOrbbec/New Unity Project/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>J:/Testing/New Unity Project/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>J:/Test/UnityOrbbec/New Unity Project/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>J:/Testing/New Unity Project/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>J:/Test/UnityOrbbec/New Unity Project/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>J:/Testing/New Unity Project/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>J:/Test/UnityOrbbec/New Unity Project/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>J:/Testing/New Unity Project/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>J:/Test/UnityOrbbec/New Unity Project/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>J:/Testing/New Unity Project/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>J:/Test/UnityOrbbec/New Unity Project/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>J:/Testing/New Unity Project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>J:/Test/UnityOrbbec/New Unity Project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>J:/Testing/New Unity Project/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>J:/Test/UnityOrbbec/New Unity Project/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>J:/Unity Engine/2019.3.0b8/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -282,7 +285,7 @@
  <HintPath>J:/Unity Engine/2019.3.0b8/Editor/Data/Managed/UnityEditor.dll</HintPath>
  </Reference>
  <Reference Include="AstraDotNet">
- <HintPath>J:/Testing/New Unity Project/Assets/Astra.Net/AstraDotNet.dll</HintPath>
+ <HintPath>J:/Test/UnityOrbbec/New Unity Project/Assets/Astra.Net/AstraDotNet.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>J:/Unity Engine/2019.3.0b8/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

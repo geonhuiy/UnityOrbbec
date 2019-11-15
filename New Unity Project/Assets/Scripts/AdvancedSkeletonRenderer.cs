@@ -158,7 +158,7 @@ public class AdvancedSkeletonRenderer : MonoBehaviour
                 // LEFT ARM
                 if (i == (int)Astra.JointType.LeftHand)
                 {
-                    leftHand.transform.position = skeletonJoint.transform.position;
+                    leftHand.transform.position = new Vector3(skeletonJoint.transform.position.x*10,skeletonJoint.transform.position.y*10, 5) ;
                     leftArmPos[0] = skeletonJoint.transform.position;
                 }
                 else if (i == (int)Astra.JointType.LeftWrist)
@@ -176,7 +176,7 @@ public class AdvancedSkeletonRenderer : MonoBehaviour
                 // RIGHT ARM
                 else if (i == (int)Astra.JointType.RightHand)
                 {
-                    rightHand.transform.position = skeletonJoint.transform.position;
+                    rightHand.transform.position = new Vector3(skeletonJoint.transform.position.x*10,skeletonJoint.transform.position.y*10, 5) ;
                     rightArmPos[0] = skeletonJoint.transform.position;
                 }
                 else if (i == (int)Astra.JointType.RightWrist)
