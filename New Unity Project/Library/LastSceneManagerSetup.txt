@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Test Scene/DemoPhysics.unity
+- path: Assets/Scenes/testScene4.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

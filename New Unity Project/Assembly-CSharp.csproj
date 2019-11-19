@@ -66,12 +66,14 @@
      <Compile Include="Assets\Scripts\Astra Scripts\ToggleRenderer.cs" />
      <Compile Include="Assets\Scripts\Astra Scripts\UIConsoleLogger.cs" />
      <Compile Include="Assets\Scripts\Class\Object.cs" />
+     <Compile Include="Assets\Scripts\ChangeSpriteShapes.cs" />
      <Compile Include="Assets\Scripts\Destroyer.cs" />
      <Compile Include="Assets\Scripts\GameHandler.cs" />
      <Compile Include="Assets\Scripts\Manager\ObjectManager.cs" />
      <Compile Include="Assets\Scripts\ScoreCheck.cs" />
      <Compile Include="Assets\Scripts\TestScript.cs" />
      <Compile Include="Assets\Scripts\spawn.cs" />
+     <Compile Include="Assets\script.cs" />
      <None Include="Assets\Materials\Nv21Render.shader" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>J:/Test/UnityOrbbec/New Unity Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
