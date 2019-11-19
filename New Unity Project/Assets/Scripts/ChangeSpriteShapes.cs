@@ -15,8 +15,6 @@ public class ChangeSpriteShapes : MonoBehaviour
         circleSprite = Resources.Load<Sprite>("Circle");
         diamondSprite = Resources.Load<Sprite>("Diamond");
         rend.sprite = circleSprite;
-        Debug.Log(circleSprite);
-        Debug.Log(diamondSprite);
     }
 
     // Update is called once per frame
@@ -30,7 +28,6 @@ public class ChangeSpriteShapes : MonoBehaviour
             {
                 rend.sprite = circleSprite;
             }
-            Debug.Log(rend.sprite);
         }
     }
 }
