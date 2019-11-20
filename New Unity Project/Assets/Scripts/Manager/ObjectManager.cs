@@ -5,39 +5,31 @@ using UnityEngine;
 public static class ObjectManager
 {   
     //list of objects
-    static private List<Object> objectList = new List<Object>();
+    static private List<string> objectList = new List<string>();
     // random generator from System library
     static private System.Random rnd = new System.Random();
     static ObjectManager() {
-        // declare objects
-        var chair = new Object("chair");
-        var egg = new Object("egg");
-        var tv = new Object("tv");
-        var tomato = new Object("tomato");
-        var oven = new Object("oven");
-        var meat = new Object("meat");
-
         //add object to object list
-        objectList.Add(chair);
-        objectList.Add(egg);
-        objectList.Add(tv);
-        objectList.Add(tomato);
-        objectList.Add(oven);
-        objectList.Add(meat);
+        objectList.Add("chair");
+        objectList.Add("egg");
+        objectList.Add("tv");
+        objectList.Add("tomato");
+        objectList.Add("oven");
+        objectList.Add("meat");
     }
 
     //get list of objects in list form
-    static List<Object> GetObjectList(){
+    static List<string> GetObjectList(){
         return objectList;
     }
 
     //get random single object from list
-    static Object GetRandomObjectFromList(List<Object> list){
+    static string GetRandomObjectFromList(List<string> list){
         return objectList[rnd.Next(0, list.Count)];
     }
 
     // check if Object item is in List<Object> list, return a boolean
-    static bool checkObjectInList(Object item, List<Object> list){
+    static bool checkObjectInList(string item, List<string> list){
         bool contain = false;
         if(list.Contains(item)){
             contain = true;
@@ -48,8 +40,8 @@ public static class ObjectManager
     }
 
     //get list of random objects with possible duplicate
-    static List<Object> GetRandomObjectWithDuplicate(int size){
-        List<Object> newList = new List<Object>();
+    public static List<string> GetRandomObjectWithDuplicate(int size){
+        List<string> newList = new List<string>();
         for (int i = 0; i < size; i++)
         {
             newList.Add(GetRandomObjectFromList(objectList));
@@ -58,9 +50,9 @@ public static class ObjectManager
     }
 
     //get list of random non duplicate objects
-    static List<Object> GetRandomObjectWithoutDuplicate(int size){
-        List<Object> newList = new List<Object>();
-        List<Object> tempList = objectList;
+    public static List<string> GetRandomObjectWithoutDuplicate(int size){
+        List<string> newList = new List<string>();
+        List<string> tempList = objectList;
         // check request list size is greater than object list count, set it to object list count
         if(size > objectList.Count)  {
             size = objectList.Count;

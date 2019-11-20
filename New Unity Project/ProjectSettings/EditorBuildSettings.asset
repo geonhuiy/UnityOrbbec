@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/TestScene2.unity
     guid: d2977e1cb4f81d7419b68298664bc431
   - enabled: 1
-    path: Assets/Test Scene/TestScene_relearn.unity
+    path: Assets/Scenes/Test Scene/TestScene_relearn.unity
     guid: 5915a375c600d2643911fcc718f74682
   m_configObjects: {}

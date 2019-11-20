@@ -2,11 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-class Object
+class Object: MonoBehaviour
 {
-    public string type;
+    string type = "";
 
-    public Object(string inputType){
-        this.type = inputType;
+    void Start() {
+
+    }
+
+    void Update() {
+        
+    }
+    
+    public void setType(string input) {
+        Debug.Log("Sprite called");
+        type = input;
+        var rend = GetComponent<SpriteRenderer>();
+        rend.sprite = Resources.Load<Sprite>(input);
     }
 }
