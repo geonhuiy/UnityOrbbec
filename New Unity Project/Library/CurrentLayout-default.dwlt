@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 388
     height: 675
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 214
     height: 380
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -406,7 +406,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 28370000243700003a370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -707,23 +707,23 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 700
-      height: 338
-    m_Scale: {x: 0.46944445, y: 0.46944445}
-    m_Translation: {x: 350, y: 169}
+      height: 359
+    m_Scale: {x: 0.49861112, y: 0.49861112}
+    m_Translation: {x: 350, y: 179.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -745.56213
+      x: -701.9498
       y: -360
-      width: 1491.1243
+      width: 1403.8997
       height: 720
     m_MinimalGUI: 1
-  m_defaultScale: 0.46944445
+  m_defaultScale: 0.49861112
   m_LastWindowPixelSize: {x: 700, y: 359}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
