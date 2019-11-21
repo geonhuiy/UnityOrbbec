@@ -1075,10 +1075,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1294033152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b440f75afb8931040a52d1eeb8c2898b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ed70470b9978de46abf72ce790efbb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreDisplay: {fileID: 1207604536}
+  scoreDisplay: {fileID: 0}
 --- !u!61 &1294033154
 BoxCollider2D:
   m_ObjectHideFlags: 0

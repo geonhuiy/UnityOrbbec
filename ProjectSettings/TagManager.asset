@@ -6,6 +6,7 @@ TagManager:
   tags:
   - handObject
   - target
+  - object
   layers:
   - Default
   - TransparentFX

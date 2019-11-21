@@ -47,7 +47,7 @@ public class PrefabLoader : MonoBehaviour
 
         //puzzleText.text = objectList[Random.Range(0, objectList.Count + 1)].name;
         Debug.Log(activeCards.Count);
-        puzzleText.text = activeCards[Random.Range(0, activeCards.Count + 1)].name;
+        puzzleText.text = activeCards[Random.Range(0, activeCards.Count)].name;
     }
 
 }
