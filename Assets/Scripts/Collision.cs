@@ -10,6 +10,8 @@ public class Collision : MonoBehaviour
     public Text answer;
     public Text display;
 
+    public GameObject camera;
+
     private GameObject handObj, targetObj;
     private Collider2D targetObjCollider;
     private bool isHovering = false;
@@ -22,15 +24,18 @@ public class Collision : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         hoverTime += Time.deltaTime;
-        
+
         if (hoverTime > maxHoverTime)
-        {   
-            Debug.Log(collision.gameObject.tag);
-            if(collision.gameObject.tag == "object") {
-                Debug.Log(collision.gameObject.name);
-                if(collision.gameObject.name == answer.text || collision.gameObject.name == answer.text+"(Clone)"){
+        {
+            if (collision.gameObject.tag == "object")
+            {
+                if (collision.gameObject.name == answer.text || collision.gameObject.name == answer.text + "(Clone)")
+                {
                     display.text = "correct answer";
-                } else {
+                    OnCorrectAnswer();
+                }
+                else
+                {
                     display.text = "incorrect answer";
                 }
             }
@@ -54,7 +59,19 @@ public class Collision : MonoBehaviour
     //     // }
     // }
 
-    private void OnMouseOver() {
+    private void OnCorrectAnswer()
+    {
+        PrefabLoader name = camera.GetComponent<PrefabLoader>();
+        for (int i = 0; i < name.activeCards.Count; i++)
+        {
+            GameObject cloneObjects = name.activeCards[i];
+            Debug.Log(cloneObjects.name);
+            Destroy(cloneObjects);
+        }
+    }
+
+    private void OnWrongAnswer()
+    {
 
     }
 }
