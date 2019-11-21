@@ -30,6 +30,8 @@ public class Collision : MonoBehaviour
                 Debug.Log(collision.gameObject.name);
                 if(collision.gameObject.name == answer.text || collision.gameObject.name == answer.text+"(Clone)"){
                     display.text = "correct answer";
+                    PrefabLoader prefloader = gameObject.GetComponentInParent<PrefabLoader>();
+                    prefloader.createRandomPrefabs();
                 } else {
                     display.text = "incorrect answer";
                 }

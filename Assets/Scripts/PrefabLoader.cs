@@ -22,7 +22,7 @@ public class PrefabLoader : MonoBehaviour
 
     }
 
-    void createRandomPrefabs()
+    public void createRandomPrefabs()
     {
         GameObject[] prefebs = Resources.LoadAll<GameObject>("Prefabs");
         List<GameObject> prefabList = new List<GameObject>();
