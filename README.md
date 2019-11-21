@@ -13,7 +13,7 @@
   - Orbbec Astra (for debugging)
   >https://orbbec3d.com/product-astra-pro/
   
-  Orbbec Persee (for deployment)
+  - Orbbec Persee (for deployment)
   >https://orbbec3d.com/product-persee/  
   
   - Unity  
