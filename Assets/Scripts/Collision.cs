@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Collision : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Collision : MonoBehaviour
     private float maxHoverTime = 2;
     public Text answer;
     public Text display;
+    public Text score;
 
     public GameObject camera;
 
@@ -31,12 +33,11 @@ public class Collision : MonoBehaviour
             {
                 if (collision.gameObject.name == answer.text || collision.gameObject.name == answer.text + "(Clone)")
                 {
-                    display.text = "correct answer";
                     OnCorrectAnswer();
                 }
                 else
                 {
-                    display.text = "incorrect answer";
+                    OnWrongAnswer();
                 }
             }
         }
@@ -67,11 +68,16 @@ public class Collision : MonoBehaviour
             GameObject cloneObjects = name.activeCards[i];
             Debug.Log(cloneObjects.name);
             Destroy(cloneObjects);
+            
         }
+        display.text = "correct answer";
+        score.text = (Int32.Parse(score.text) + 50).ToString();
+        name.activeCards.Clear();
+        name.createRandomPrefabs();
     }
 
     private void OnWrongAnswer()
     {
-
+        display.text = "incorrect answer";
     }
 }

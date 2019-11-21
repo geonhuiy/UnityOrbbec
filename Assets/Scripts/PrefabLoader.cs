@@ -7,8 +7,6 @@ public class PrefabLoader : MonoBehaviour
 {
     public List<GameObject> cardPositions;
     public Text puzzleText;
-    private List<GameObject> objectList = new List<GameObject>();
-
     public List<GameObject> activeCards = new List<GameObject>();
 
 
@@ -24,7 +22,7 @@ public class PrefabLoader : MonoBehaviour
 
     }
 
-    void createRandomPrefabs()
+    public void createRandomPrefabs()
     {
         GameObject[] prefebs = Resources.LoadAll<GameObject>("Prefabs");
         List<GameObject> prefabList = new List<GameObject>();
@@ -49,7 +47,8 @@ public class PrefabLoader : MonoBehaviour
 
         //puzzleText.text = objectList[Random.Range(0, objectList.Count + 1)].name;
         Debug.Log(activeCards.Count);
-        puzzleText.text = activeCards[Random.Range(0, activeCards.Count)].name;
+        string objectName = activeCards[Random.Range(0, activeCards.Count)].name;
+        puzzleText.text = objectName.Substring(0, objectName.Length - 7);
     }
 
 }
