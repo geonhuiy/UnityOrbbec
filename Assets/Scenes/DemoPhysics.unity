@@ -1327,7 +1327,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1584457656}
-  - component: {fileID: 1584457655}
   - component: {fileID: 1584457654}
   m_Layer: 0
   m_Name: SkeletonViewer
@@ -1345,7 +1344,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1584457653}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cf04adb34584a44cb5556726b9160a3, type: 3}
+  m_Script: {fileID: 11500000, guid: d498ca36453406a4b89b006187667ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   leftArmRenderer: {fileID: 1720038395}
@@ -1353,34 +1352,10 @@ MonoBehaviour:
   leftLegRenderer: {fileID: 17548771}
   rightLegRenderer: {fileID: 2025355335}
   torsoRenderer: {fileID: 271655680}
-  leftHand: {fileID: 1294033155}
-  rightHand: {fileID: 250067457}
-  JointPrefab: {fileID: 100000, guid: 1190a34979a38ae4db353c77e7cd2281, type: 3}
-  JointRoot: {fileID: 69812690}
-  ToggleSeg: {fileID: 0}
-  ToggleSegBody: {fileID: 0}
-  ToggleSegBodyHand: {fileID: 0}
-  ToggleProfileFull: {fileID: 0}
-  ToggleProfileUpperBody: {fileID: 0}
-  ToggleProfileBasic: {fileID: 0}
-  ToggleOptimizationAccuracy: {fileID: 0}
-  ToggleOptimizationBalanced: {fileID: 0}
-  ToggleOptimizationMemory: {fileID: 0}
-  SliderOptimization: {fileID: 0}
---- !u!114 &1584457655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584457653}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c8d238647de80c47bf5c420698db457, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  JointPrefab: {fileID: 100000, guid: 1190a34979a38ae4db353c77e7cd2281, type: 3}
-  JointRoot: {fileID: 69812690}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
+  JointPrefab: {fileID: 0}
+  JointRoot: {fileID: 0}
   ToggleSeg: {fileID: 0}
   ToggleSegBody: {fileID: 0}
   ToggleSegBodyHand: {fileID: 0}

@@ -10,7 +10,8 @@ public class Attach : MonoBehaviour
     void Update()
     {
         mousePosition = Input.mousePosition;
+        mousePosition.z = 1;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        transform.position = Vector2.Lerp(transform.position, mousePosition, moveSpeed);
+        transform.position = Vector3.Lerp(transform.position, mousePosition, moveSpeed);
     }
 }

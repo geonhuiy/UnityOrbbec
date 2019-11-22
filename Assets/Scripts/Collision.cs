@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Collision : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class Collision : MonoBehaviour
     private float maxHoverTime = 2;
     public Text answer;
     public Text display;
+    public Text score;
+
+    public GameObject camera;
 
     private GameObject handObj, targetObj;
     private Collider2D targetObjCollider;
@@ -22,16 +26,18 @@ public class Collision : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         hoverTime += Time.deltaTime;
-        
+
         if (hoverTime > maxHoverTime)
-        {   
-            Debug.Log(collision.gameObject.tag);
-            if(collision.gameObject.tag == "object") {
-                Debug.Log(collision.gameObject.name);
-                if(collision.gameObject.name == answer.text || collision.gameObject.name == answer.text+"(Clone)"){
-                    display.text = "correct answer";
-                } else {
-                    display.text = "incorrect answer";
+        {
+            if (collision.gameObject.tag == "object")
+            {
+                if (collision.gameObject.name == answer.text || collision.gameObject.name == answer.text + "(Clone)")
+                {
+                    OnCorrectAnswer();
+                }
+                else
+                {
+                    OnWrongAnswer();
                 }
             }
         }
@@ -54,7 +60,24 @@ public class Collision : MonoBehaviour
     //     // }
     // }
 
-    private void OnMouseOver() {
+    private void OnCorrectAnswer()
+    {
+        PrefabLoader name = camera.GetComponent<PrefabLoader>();
+        for (int i = 0; i < name.activeCards.Count; i++)
+        {
+            GameObject cloneObjects = name.activeCards[i];
+            Debug.Log(cloneObjects.name);
+            Destroy(cloneObjects);
+            
+        }
+        display.text = "correct answer";
+        score.text = (Int32.Parse(score.text) + 50).ToString();
+        name.activeCards.Clear();
+        name.createRandomPrefabs();
+    }
 
+    private void OnWrongAnswer()
+    {
+        display.text = "incorrect answer";
     }
 }
