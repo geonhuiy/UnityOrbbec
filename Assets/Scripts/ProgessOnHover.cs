@@ -25,11 +25,6 @@ public class ProgessOnHover : MonoBehaviour
     {
         isHovering = true;
         Debug.Log("Enter trigger");
-        //if (hoverTime > maxHoverTime)
-        //{
-        //    handObj = collision.gameObject;
-        //    buttonObj = gameObject;
-        //}
     }
 
     //When you leave the colldier
