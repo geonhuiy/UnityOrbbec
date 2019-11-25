@@ -23,13 +23,10 @@ public class ProgessOnHover : MonoBehaviour
     // When you enter the collider 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        isHovering = true;
-        Debug.Log("Enter trigger");
-        //if (hoverTime > maxHoverTime)
-        //{
-        //    handObj = collision.gameObject;
-        //    buttonObj = gameObject;
-        //}
+        if(collision.gameObject.tag == "object" || collision.gameObject.tag == "user_interactable") {
+            isHovering = true;
+            Debug.Log("Enter trigger");
+        }
     }
 
     //When you leave the colldier
@@ -38,8 +35,6 @@ public class ProgessOnHover : MonoBehaviour
         resetProgressBarValues();   
         Debug.Log("Left the collider");
     }
-
-    
 
     private void Start()
     {
@@ -59,37 +54,24 @@ public class ProgessOnHover : MonoBehaviour
             {
                 Radial.gameObject.SetActive(true);
                 currentAmount = speed*hoverTime;
-                //TextIndicatorPercent.GetComponent<Text>().text = ((int)currentAmount).ToString() + "%";
-                //TextLoading.gameObject.SetActive(true);
-
             }
             // When the loading bar is full
             else
             {
-                //TextLoading.gameObject.SetActive(false);
-                //TextIndicatorPercent.GetComponent<Text>().text = "DONE!";
                 Radial.gameObject.SetActive(false);
-
             }
-
-            LoadingBar.GetComponent<Image>().fillAmount = currentAmount / 100;
+            Radial.GetComponent<Image>().fillAmount = currentAmount / 100;
             Debug.Log("The current amount " + currentAmount);
-            //buttonObjCollider = buttonObj.GetComponent<Collider2D>();
-            //buttonObjCollider.enabled = false;
-            //buttonObj.transform.position = handObj.transform.position;
         }
 
     }
-
-
-
-
 
     // Reset the values for the progress bar
     private void resetProgressBarValues()
     {
         isHovering = false;
-        //Radial.gameObject.SetActive(false);
+        Radial.GetComponent<Image>().fillAmount = 0;
+        Radial.gameObject.SetActive(false);
         currentAmount = 0;
         hoverTime = 0;
     }

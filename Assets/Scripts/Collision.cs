@@ -7,7 +7,7 @@ using System;
 public class Collision : MonoBehaviour
 {
     private float hoverTime = 0;
-    private float maxHoverTime = 2;
+    private float maxHoverTime = 1.2f;
     public Text answer;
     public Text display;
     public Text score;
