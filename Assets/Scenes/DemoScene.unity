@@ -240,6 +240,7 @@ GameObject:
   - component: {fileID: 112983599}
   - component: {fileID: 112983596}
   - component: {fileID: 112983600}
+  - component: {fileID: 112983601}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -366,6 +367,20 @@ SortingGroup:
   m_SortingLayerID: -336173005
   m_SortingLayer: 2
   m_SortingOrder: 0
+--- !u!114 &112983601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112983594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b277321cd95aef74aa4bc71544dc3e3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHand: {fileID: 825446298}
+  rightHand: {fileID: 112983594}
 --- !u!1 &249600813
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,6 +760,7 @@ GameObject:
   - component: {fileID: 825446300}
   - component: {fileID: 825446299}
   - component: {fileID: 825446304}
+  - component: {fileID: 825446305}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: Untagged
@@ -871,6 +887,20 @@ SortingGroup:
   m_SortingLayerID: -336173005
   m_SortingLayer: 2
   m_SortingOrder: 0
+--- !u!114 &825446305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825446298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b277321cd95aef74aa4bc71544dc3e3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHand: {fileID: 825446298}
+  rightHand: {fileID: 112983594}
 --- !u!1001 &848488757
 PrefabInstance:
   m_ObjectHideFlags: 0
