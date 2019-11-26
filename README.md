@@ -1,5 +1,5 @@
 # UnityOrbbec
-> Project repository for a Unity-based 3-D motion controlled game/platform designed for the elderly.  
+> Project repository for a Unity-based 3-D motion controlled game/platform designed for the elderly. This project is designed to run on the Orbbec Persee (check under prerequisites).  
 ## Table of Contents  
  * [Getting Started](#getting-started)   
    * [Prerequisites](#prerequisites)  
@@ -17,11 +17,10 @@
   >https://orbbec3d.com/product-persee/  
   
   - Unity  
-  
   Download Unity Hub from  
   https://unity3d.com/get-unity/download  
-  >Unity 2019.212f1 was used to create this project.  
-  After the installation is complete, open Unity Hub and add Unity 2019.211f1 under Installs - Add.  
+  >Unity 2019.2.12f1 was used to create this project.  
+  After the installation is complete, open Unity Hub and add Unity 2019.2.12f1 under Installs - Add.  
   Add "Android Build Support" module.
   
   
