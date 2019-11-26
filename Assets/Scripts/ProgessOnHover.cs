@@ -7,7 +7,7 @@ public class ProgessOnHover : MonoBehaviour
 {
     private bool isHovering = false;
     private float hoverTime;
-    private float maxHoverTime = 2.0f;
+    public float maxHoverTime;
     public float speed;
     [SerializeField] private float currentAmount;
 
