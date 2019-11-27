@@ -61,7 +61,7 @@ public class ProgessOnHover : MonoBehaviour
                 Radial.gameObject.SetActive(false);
             }
             Radial.GetComponent<Image>().fillAmount = currentAmount / 100;
-            Debug.Log("The current amount " + currentAmount);
+            //Debug.Log("The current amount " + currentAmount);
         }
 
     }
