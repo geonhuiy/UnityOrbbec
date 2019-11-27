@@ -23,7 +23,7 @@ public class ProgessOnHover : MonoBehaviour
     // When you enter the collider 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "object" || collision.gameObject.tag == "user_interactable") {
+        if(collision.gameObject.tag == "object" || collision.gameObject.tag == "user_interactable" || collision.gameObject.tag == "tutorialButton") {
             isHovering = true;
             Debug.Log("Enter trigger");
         }

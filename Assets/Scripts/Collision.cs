@@ -12,11 +12,38 @@ public class Collision : MonoBehaviour
     public Text display;
     public Text score;
 
+    // the camera in the scene
     public GameObject camera;
 
-    private GameObject handObj, targetObj;
-    private Collider2D targetObjCollider;
+    // tutorial display object
+    public GameObject tutorialScreen;
+    private int tutorialCount = 0;
     private bool isHovering = false;
+
+    void Start() {
+        answer.text = "";
+        score.text = "";
+        display.text = "";
+        tutorialCount = 1;
+        ShowTutorial();
+    }
+
+    // display tutorial at the start of the game
+    private void ShowTutorial() {
+        if(tutorialCount < 4) {
+            tutorialScreen.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("TutorialScreen/Tutorial Sample "+ tutorialCount);
+        } else {
+            InitGame();
+        }
+        
+    }
+
+    private void InitGame() {
+        score.text = "0";
+        Destroy(tutorialScreen);
+        StartRound();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Debug.Log(collision.gameObject.tag);
@@ -29,17 +56,28 @@ public class Collision : MonoBehaviour
 
         if (hoverTime > maxHoverTime)
         {
-            if (collision.gameObject.tag == "object")
-            {
-                if (collision.gameObject.name == answer.text || collision.gameObject.name == answer.text + "(Clone)")
-                {
-                    OnCorrectAnswer();
-                }
-                else
-                {
-                    OnWrongAnswer();
-                }
+            switch(collision.gameObject.tag) {
+                // when user hover over card object
+                case "object":
+                    hoverTime = 0;
+                    if (collision.gameObject.name == answer.text || collision.gameObject.name == answer.text + "(Clone)")
+                    {
+                        OnCorrectAnswer();
+                    }
+                    else
+                    {
+                        OnWrongAnswer();
+                    }
+                    break;
+                
+                // when user hover over tutorial object
+                case "tutorialButton":
+                    tutorialCount++;
+                    hoverTime = 0;
+                    ShowTutorial();
+                    break;
             }
+            
         }
     }
 
@@ -47,48 +85,32 @@ public class Collision : MonoBehaviour
     {
         isHovering = false;
         hoverTime = 0;
-        display.text = "try again";
     }
-
-    // private void Update()
-    // {
-    //     // if (isHovering)
-    //     // {
-    //     //     targetObjCollider = targetObj.GetComponent<Collider2D>();
-    //     //     targetObjCollider.enabled = false;
-    //     //     targetObj.transform.position = handObj.transform.position;
-    //     // }
-    // }
 
     private void OnCorrectAnswer()
     {
-        PrefabLoader name = camera.GetComponent<PrefabLoader>();
-        for (int i = 0; i < name.activeCards.Count; i++)
-        {
-            GameObject cloneObjects = name.activeCards[i];
-            Debug.Log(cloneObjects.name);
-            Destroy(cloneObjects);
-            
-        }
         display.text = "correct answer";
         score.text = (Int32.Parse(score.text) + 50).ToString();
-        name.activeCards.Clear();
-        name.createRandomPrefabs();
+        StartRound();
     }
 
     private void OnWrongAnswer()
     {
-        PrefabLoader name = camera.GetComponent<PrefabLoader>();
-        for (int i = 0; i < name.activeCards.Count; i++)
+        display.text = "incorrect answer";
+        score.text = (Int32.Parse(score.text) - 50).ToString();
+        StartRound();
+    }
+
+    private void StartRound() {
+        PrefabLoader prefabLoader = camera.GetComponent<PrefabLoader>();
+        for (int i = 0; i < prefabLoader.activeCards.Count; i++)
         {
-            GameObject cloneObjects = name.activeCards[i];
+            GameObject cloneObjects = prefabLoader.activeCards[i];
             Debug.Log(cloneObjects.name);
             Destroy(cloneObjects);
             
         }
-        display.text = "incorrect answer";
-        score.text = (Int32.Parse(score.text) - 50).ToString();
-        name.activeCards.Clear();
-        name.createRandomPrefabs();
+        prefabLoader.activeCards.Clear();
+        prefabLoader.createRandomPrefabs();
     }
 }

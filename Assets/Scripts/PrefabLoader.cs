@@ -13,7 +13,7 @@ public class PrefabLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        createRandomPrefabs();
+        
     }
 
     // Update is called once per frame
@@ -21,6 +21,8 @@ public class PrefabLoader : MonoBehaviour
     {
 
     }
+
+    
 
     public void createRandomPrefabs()
     {
