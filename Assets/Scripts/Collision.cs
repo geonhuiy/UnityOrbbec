@@ -78,6 +78,17 @@ public class Collision : MonoBehaviour
 
     private void OnWrongAnswer()
     {
+        PrefabLoader name = camera.GetComponent<PrefabLoader>();
+        for (int i = 0; i < name.activeCards.Count; i++)
+        {
+            GameObject cloneObjects = name.activeCards[i];
+            Debug.Log(cloneObjects.name);
+            Destroy(cloneObjects);
+            
+        }
         display.text = "incorrect answer";
+        score.text = (Int32.Parse(score.text) - 50).ToString();
+        name.activeCards.Clear();
+        name.createRandomPrefabs();
     }
 }
