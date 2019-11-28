@@ -1560,7 +1560,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 50bb7edb629d0dd48bd9e623543afd8f, type: 2}
   - {fileID: 11400000, guid: 0820a56aec6c2f04f880eee6ba6cd045, type: 2}
   - {fileID: 11400000, guid: 1fe98decdd8cb394caad27ad270d6712, type: 2}
-  - {fileID: 11400000, guid: fb15a695e8b7c1a40832aaa14bb2d1f9, type: 2}
+  - {fileID: 11400000, guid: 0ac1e23a762c843f2866d7656d0fa16e, type: 2}
+  - {fileID: 11400000, guid: 67e413c2e58974cf699116dab429e7de, type: 2}
+  - {fileID: 11400000, guid: a2a3a3a2cca3343528b2322666065b25, type: 2}
+  - {fileID: 11400000, guid: 54b731ebefb0340438ebadaa42c11e67, type: 2}
+  - {fileID: 11400000, guid: 783bcc2d7b6ff4d56a25ac73f15eba3c, type: 2}
   randomText: {fileID: 1716431255}
   selectedCard: 0
 --- !u!4 &773442262
