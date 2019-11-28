@@ -7,6 +7,8 @@ public class HandManager : MonoBehaviour
     public static HandManager instance;
     [SerializeField]
     private GameObject leftHand, rightHand;
+    private List<GameObject> cardObjects;
+
 
     void Awake()
     {
@@ -19,23 +21,27 @@ public class HandManager : MonoBehaviour
         //Set current to HandManager
         instance = this;
         DontDestroyOnLoad(this);
+
     }
 
     private void checkCollidingHand()
     {
         Collider2D leftCollider = leftHand.GetComponent<Collider2D>();
         Collider2D rightCollider = rightHand.GetComponent<Collider2D>();
-        List<GameObject> cardObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("card"));
+        cardObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("card"));
         foreach (var i in cardObjects)
         {
-            if(leftCollider.IsTouching(i.GetComponent<Collider2D>())) {
+            if (leftCollider.IsTouching(i.GetComponent<Collider2D>()))
+            {
                 rightCollider.enabled = false;
             }
             //rightCollider.enabled = true;
-            else if(rightCollider.IsTouching(i.GetComponent<Collider2D>())) {
+            else if (rightCollider.IsTouching(i.GetComponent<Collider2D>()))
+            {
                 leftCollider.enabled = false;
             }
-            else {
+            else
+            {
                 leftCollider.enabled = true;
                 rightCollider.enabled = true;
             }
