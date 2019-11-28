@@ -16,6 +16,16 @@ public class TutorialNextButton : MonoBehaviour
         hoverTime = 0;
     }
 
+    /// <summary>
+    /// Sent when another object leaves a trigger collider attached to
+    /// this object (2D physics only).
+    /// </summary>
+    /// <param name="other">The other Collider2D involved in this collision.</param>
+    void OnTriggerExit2D(Collider2D other)
+    {
+        isHovering = false;
+    }
+
     void Update() {
         if(isHovering) {
             hoverTime += Time.deltaTime;
