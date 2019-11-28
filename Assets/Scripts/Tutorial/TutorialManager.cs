@@ -25,9 +25,11 @@ public class TutorialManager : MonoBehaviour
 
     public void ShowTutorial()
     {
+        //Increments the tutorial sprite each time next button is pressed/hovered on
         tutorialCount++;
         if (tutorialCount > 3)
         {
+            //Starts the game after the tutorial count
             InitGame();
         }
         else
@@ -38,8 +40,11 @@ public class TutorialManager : MonoBehaviour
 
     private void InitGame()
     {
+        //Loads the game canvas 
         cardCanvas.gameObject.SetActive(true);
+        //Random card generation on the game canvas
         CardManager.instance.AssignSprites();
+        //Disables the tutorial canvas
         tutorialScreen.gameObject.SetActive(false);
     }
 

@@ -26,16 +26,20 @@ public class HandManager : MonoBehaviour
 
     private void checkCollidingHand()
     {
+        //Gets collider components for each hand object
         Collider2D leftCollider = leftHand.GetComponent<Collider2D>();
         Collider2D rightCollider = rightHand.GetComponent<Collider2D>();
+
+        //Finds objects with tag 'card'
         cardObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("card"));
         foreach (var i in cardObjects)
         {
+            //Disable right hand collider if left is touching a card
             if (leftCollider.IsTouching(i.GetComponent<Collider2D>()))
             {
                 rightCollider.enabled = false;
             }
-            //rightCollider.enabled = true;
+            //Disable left hand collider if right is touching a card
             else if (rightCollider.IsTouching(i.GetComponent<Collider2D>()))
             {
                 leftCollider.enabled = false;
@@ -45,7 +49,6 @@ public class HandManager : MonoBehaviour
                 leftCollider.enabled = true;
                 rightCollider.enabled = true;
             }
-            //leftCollider.enabled = true;
         }
     }
     void Update()
