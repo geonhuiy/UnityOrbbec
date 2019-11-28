@@ -75,9 +75,9 @@ public class CardManager : MonoBehaviour
 
     private void RandomText()
     {
+        //Selects a random card name from the 3 cards shown
         int rand = UnityEngine.Random.Range(0, currentCardName.Count);
         randomText.text = currentCardName[rand];
         correctCard = rand;
-        Debug.Log(rand);
     }
 }
