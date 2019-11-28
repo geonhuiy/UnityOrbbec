@@ -26,13 +26,14 @@ public class CardCollision : MonoBehaviour
         hoverTime = 0;
         isHovering = true;
         Debug.Log("Trigger entered");
-        if(other.gameObject.tag == "handObject"){
+        if (other.gameObject.tag == "handObject")
+        {
             if (CardManager.instance.selectedCard == 0)
             {
                 CardManager.instance.selectedCard = cardNum;
             }
         }
-        
+
     }
 
     /*private void OnTriggerStay2D(Collider2D collision)
@@ -62,13 +63,6 @@ public class CardCollision : MonoBehaviour
         if (isHovering)
         {
             transform.localScale = Vector2.Lerp(transform.localScale, newScale, speed * Time.deltaTime);
-        }
-        else
-        {
-            transform.localScale = Vector2.Lerp(transform.localScale, normalScale, speed * Time.deltaTime);
-        }
-        if (isHovering)
-        {
             hoverTime += Time.deltaTime;
             //Debug.Log(hoverTime);
 
@@ -80,6 +74,10 @@ public class CardCollision : MonoBehaviour
                 hoverTime = 0;
                 CardManager.instance.CheckAnswer();
             }
-        } 
+        }
+        else
+        {
+            transform.localScale = Vector2.Lerp(transform.localScale, normalScale, speed * Time.deltaTime);
+        }
     }
 }

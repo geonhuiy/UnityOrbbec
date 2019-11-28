@@ -21,5 +21,9 @@ public class HandManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
+    private void checkCollidingHand() {
+        
+    }
+
 
 }

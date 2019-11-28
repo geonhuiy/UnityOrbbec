@@ -26,7 +26,7 @@ public class TutorialNextButton : MonoBehaviour
             if(hoverTime >= maxHoverTime) {
                 isHovering = false;
                 hoverTime = 0;
-                CardManager.instance.ShowTutorial();
+                TutorialManager.instance.ShowTutorial();
             }
         }
     }
