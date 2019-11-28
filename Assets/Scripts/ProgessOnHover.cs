@@ -11,19 +11,12 @@ public class ProgessOnHover : MonoBehaviour
     public float speed;
     [SerializeField] private float currentAmount;
 
-    public Transform LoadingBar;
     public Transform Radial;
-    public Transform TextIndicatorPercent;
-    public Transform TextLoading;
-
-    public GameObject handObj, buttonObj;
-    public Collider2D buttonObjCollider;
-
 
     // When you enter the collider 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "object" || collision.gameObject.tag == "user_interactable") {
+        if(collision.gameObject.tag == "object" || collision.gameObject.tag == "user_interactable" || collision.gameObject.tag == "tutorialButton") {
             isHovering = true;
             Debug.Log("Enter trigger");
         }
@@ -63,7 +56,6 @@ public class ProgessOnHover : MonoBehaviour
             Radial.GetComponent<Image>().fillAmount = currentAmount / 100;
             //Debug.Log("The current amount " + currentAmount);
         }
-
     }
 
     // Reset the values for the progress bar

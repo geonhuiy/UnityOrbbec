@@ -26,10 +26,13 @@ public class CardCollision : MonoBehaviour
         hoverTime = 0;
         isHovering = true;
         Debug.Log("Trigger entered");
-        if (CardManager.instance.selectedCard == 0)
-        {
-            CardManager.instance.selectedCard = cardNum;
+        if(other.gameObject.tag == "handObject"){
+            if (CardManager.instance.selectedCard == 0)
+            {
+                CardManager.instance.selectedCard = cardNum;
+            }
         }
+        
     }
 
     /*private void OnTriggerStay2D(Collider2D collision)
@@ -82,8 +85,6 @@ public class CardCollision : MonoBehaviour
                 hoverTime = 0;
                 CardManager.instance.CheckAnswer();
             }
-        }
-
-        
+        } 
     }
 }

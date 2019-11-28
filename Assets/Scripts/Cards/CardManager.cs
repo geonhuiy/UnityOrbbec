@@ -7,8 +7,10 @@ public class CardManager : MonoBehaviour
 {
     //Card manager singleton
     public static CardManager instance;
-
     public Text scoreDisplay;
+    public Canvas cardCanvas;
+    public GameObject tutorialScreen;
+    private int tutorialCount = 0;
     //Placeholder empty GameObjects in the scene
     [SerializeField]
     private GameObject[] placeholders;
@@ -30,11 +32,35 @@ public class CardManager : MonoBehaviour
         //Set current to CardManager
         instance = this;
         DontDestroyOnLoad(this);
-        AssignSprites();
+        
     }
 
     private void Start() {
+        cardCanvas.gameObject.SetActive(false);
+        ShowTutorial();
+    }
 
+    public void ShowTutorial() {
+        tutorialCount++;
+        if(tutorialCount > 3) {
+            InitGame();
+        } else {
+            tutorialScreen.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Tutorial/Tutorial Sample "+ tutorialCount);
+        }
+
+    }
+    private void InitGame() {
+        cardCanvas.gameObject.SetActive(true);
+        StartRound();
+    }
+
+    private void EndRound() {
+        // end round is display answer result and feedback to player
+        StartRound();
+    }
+
+    private void StartRound() {
+        AssignSprites();
     }
     
     public void CheckAnswer() {
@@ -49,15 +75,6 @@ public class CardManager : MonoBehaviour
 
         //after checking for score, move to end round
         EndRound();
-    }
-
-    private void EndRound() {
-        // end round is display answer result and feedback to player
-        StartRound();
-    }
-
-    private void StartRound() {
-        AssignSprites();
     }
 
     private void AssignSprites()

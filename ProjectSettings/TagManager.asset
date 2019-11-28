@@ -7,6 +7,7 @@ TagManager:
   - handObject
   - target
   - object
+  - tutorialButton
   layers:
   - Default
   - TransparentFX
@@ -43,6 +44,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: TutorialCanvas
+    uniqueID: 1902849849
     locked: 0
   - name: BackgroundCanvas
     uniqueID: 927246059
