@@ -23,6 +23,8 @@ public class CardCollision : MonoBehaviour
     isHovering becomes true*/
     private void OnTriggerEnter2D(Collider2D other)
     {
+        hoverTime = 0;
+        isHovering = true;
         Debug.Log("Trigger entered");
         if (CardManager.instance.selectedCard == 0)
         {
@@ -30,16 +32,17 @@ public class CardCollision : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    /*private void OnTriggerStay2D(Collider2D collision)
     {
         hoverTime += Time.deltaTime;
 
-    }
+    }*/
 
     // When the collision ends between a mouse(for test) or hands, isHovering becomes false 
     void OnTriggerExit2D(Collider2D other)
     {
         Debug.Log("Trigger exit");
+        isHovering = false;
         if (cardNum == CardManager.instance.selectedCard) {
             CardManager.instance.selectedCard = 0;
         }
@@ -49,7 +52,7 @@ public class CardCollision : MonoBehaviour
     // Keep updating the scale of a card objects according to the isHovering status in each frame
     private void Update()
     {
-        if (isHovering)
+        /*if (isHovering)
         {
             transform.localScale = Vector3.Lerp(transform.localScale, newScale, speed * Time.deltaTime);
 
@@ -65,7 +68,16 @@ public class CardCollision : MonoBehaviour
         }
         else
         {
-            transform.localScale = Vector3.Lerp(transform.localScale, normalScale, speed * Time.deltaTime);
+            //transform.localScale = Vector3.Lerp(transform.localScale, normalScale, speed * Time.deltaTime);
+        }*/
+        if(isHovering) {
+            hoverTime += Time.deltaTime;
+            Debug.Log(hoverTime);
         }
     }
+
+    private void CheckAnswer() {
+
+    }
+    
 }

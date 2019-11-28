@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class CardManager : MonoBehaviour
     private GameObject[] placeholders;
     [SerializeField]
     private Card[] cardNames;
+    [SerializeField]
+    private Text randomText;
     public int selectedCard;
     void Awake()
     {
@@ -24,6 +27,7 @@ public class CardManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(this);
         AssignSprites();
+        RandomText();
     }
 
 
@@ -35,7 +39,7 @@ public class CardManager : MonoBehaviour
         for (int i = 0; i < placeholders.Length; ++i)
         {
             //Chooses a random number below the Card count
-            int rand = Random.Range(0,activeCards.Count);
+            int rand = Random.Range(0, activeCards.Count);
             //Instantiates a Card at position rand
             Card randCard = activeCards[rand];
             //Sets the sprite of placeholder GameObject to the sprite component of randCard
@@ -43,5 +47,11 @@ public class CardManager : MonoBehaviour
             //Removes the randCard to prevent duplicate sprites from being selected
             activeCards.Remove(randCard);
         }
+    }
+
+    private void RandomText()
+    {
+            int rand = Random.Range(1, placeholders.Length + 1);
+            Debug.Log(rand);
     }
 }
