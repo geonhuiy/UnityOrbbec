@@ -14,25 +14,23 @@ public class ProgessOnHover : MonoBehaviour
     public Transform Radial;
 
     // When you enter the collider 
-    /*private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "object" || collision.gameObject.tag == "user_interactable" || collision.gameObject.tag == "tutorialButton") {
-            isHovering = true;
-            Debug.Log("Enter trigger");
-        }
+        isHovering = true;
+
     }
 
     //When you leave the colldier
     private void OnTriggerExit2D(Collider2D collision)
     {
-        resetProgressBarValues();   
+        resetProgressBarValues();
         Debug.Log("Left the collider");
     }
 
-    private void Start()
+    /*private void Start()
     {
         Radial.gameObject.SetActive(false);
-    }
+    }*/
 
     private void Update()
     {
@@ -46,7 +44,7 @@ public class ProgessOnHover : MonoBehaviour
             if (currentAmount < 100)
             {
                 Radial.gameObject.SetActive(true);
-                currentAmount = speed*hoverTime;
+                currentAmount = speed * hoverTime;
             }
             // When the loading bar is full
             else
@@ -66,5 +64,5 @@ public class ProgessOnHover : MonoBehaviour
         Radial.gameObject.SetActive(false);
         currentAmount = 0;
         hoverTime = 0;
-    }*/
+    }
 }
