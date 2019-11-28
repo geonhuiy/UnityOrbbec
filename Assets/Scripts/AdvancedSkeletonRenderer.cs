@@ -244,11 +244,11 @@ public class AdvancedSkeletonRenderer : MonoBehaviour
                     torsoPos[4] = skeletonJoint.transform.position;
                 }
             }
-            print(leftArmPos[1]);
-            print(rightArmPos);
-            print(rightLegsPos);
-            print(torsoPos);
-            print(leftArmPos);
+            //print(leftArmPos[1] + "Left arm");    
+            //print(rightArmPos);
+            //print(rightLegsPos);
+            //print(torsoPos);
+            //print(leftArmPos);
             if (leftArmRenderer != null)
         {
             leftArmRenderer.SetPositions(leftArmPos);

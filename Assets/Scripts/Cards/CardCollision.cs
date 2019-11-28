@@ -8,9 +8,9 @@ public class CardCollision : MonoBehaviour
     [SerializeField]
     private int cardNum;
     private bool isHovering = false;
-    private Vector3 newScale = new Vector3(0.65f, 0.65f, 0.65f);
-    private Vector3 normalScale = new Vector3(0.5f, 0.5f, 1f);
-    private float speed = 2.0f;
+    private Vector2 newScale = new Vector2(25.00f, 25.00f);
+    private Vector2 normalScale = new Vector2(20.363f, 20.363f);
+    private float speed = 3.0f;
     private float hoverTime = 0;
     private float maxHoverTime = 2.0f;
 
@@ -47,7 +47,8 @@ public class CardCollision : MonoBehaviour
         Debug.Log("Trigger exit");
         isHovering = false;
         hoverTime = 0;
-        if (cardNum == CardManager.instance.selectedCard) {
+        if (cardNum == CardManager.instance.selectedCard)
+        {
             CardManager.instance.selectedCard = 0;
         }
 
@@ -56,31 +57,25 @@ public class CardCollision : MonoBehaviour
     // Keep updating the scale of a card objects according to the isHovering status in each frame
     private void Update()
     {
-        /*if (isHovering)
+        //Vector2 normalScale = new Vector2(transform.position.x, transform.position.y);
+
+        if (isHovering)
         {
-            transform.localScale = Vector3.Lerp(transform.localScale, newScale, speed * Time.deltaTime);
-
-            if (hoverTime > maxHoverTime)
-            {
-                Vector3 theScale = transform.localScale;
-
-                theScale.x *= -1;
-
-                transform.localScale = theScale;
-            }
-
+            transform.localScale = Vector2.Lerp(transform.localScale, newScale, speed * Time.deltaTime);
         }
         else
         {
-            //transform.localScale = Vector3.Lerp(transform.localScale, normalScale, speed * Time.deltaTime);
-        }*/
-        if(isHovering) {
+            transform.localScale = Vector2.Lerp(transform.localScale, normalScale, speed * Time.deltaTime);
+        }
+        if (isHovering)
+        {
             hoverTime += Time.deltaTime;
-            Debug.Log(hoverTime);
+            //Debug.Log(hoverTime);
 
             // when hover time goes over max hover time, stop checking for hover and start the check 
             // answer progress, the stop is to stop the check answer function getting called repeatedly
-            if(hoverTime >= maxHoverTime) {
+            if (hoverTime >= maxHoverTime)
+            {
                 isHovering = false;
                 hoverTime = 0;
                 CardManager.instance.CheckAnswer();
