@@ -15,7 +15,7 @@ public class CardManager : MonoBehaviour
     [SerializeField]
     private GameObject[] placeholders;
     [SerializeField]
-    private Card[] cardNames = null;
+    private Card[] cardNames;
     [SerializeField]
     private Text randomText;
     private List<string> currentCardName = new List<string>();
