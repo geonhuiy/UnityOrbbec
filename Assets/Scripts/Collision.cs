@@ -13,7 +13,7 @@ public class Collision : MonoBehaviour
     public Text score;
 
     // the camera in the scene
-    public GameObject camera;
+    public GameObject sceneCamera;
 
     // tutorial display object
     public GameObject tutorialScreen;
@@ -38,10 +38,43 @@ public class Collision : MonoBehaviour
         
     }
 
+    // start the game after the player finished with the tutorial
     private void InitGame() {
         score.text = "0";
         Destroy(tutorialScreen);
         StartRound();
+    }
+
+    private void OnCorrectAnswer()
+    {
+        display.text = "correct answer";
+        score.text = (Int32.Parse(score.text) + 50).ToString();
+        EndRound();
+    }
+
+    private void OnWrongAnswer()
+    {
+        display.text = "incorrect answer";
+        score.text = (Int32.Parse(score.text) - 50).ToString();
+        EndRound();
+    }
+
+    private void EndRound() {
+        
+    }
+
+    private void StartRound() {
+        display.text = "Choose image to match the word below";
+        PrefabLoader prefabLoader = sceneCamera.GetComponent<PrefabLoader>();
+        for (int i = 0; i < prefabLoader.activeCards.Count; i++)
+        {
+            GameObject cloneObjects = prefabLoader.activeCards[i];
+            Debug.Log(cloneObjects.name);
+            Destroy(cloneObjects);
+            
+        }
+        prefabLoader.activeCards.Clear();
+        prefabLoader.createRandomPrefabs();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -85,32 +118,5 @@ public class Collision : MonoBehaviour
     {
         isHovering = false;
         hoverTime = 0;
-    }
-
-    private void OnCorrectAnswer()
-    {
-        display.text = "correct answer";
-        score.text = (Int32.Parse(score.text) + 50).ToString();
-        StartRound();
-    }
-
-    private void OnWrongAnswer()
-    {
-        display.text = "incorrect answer";
-        score.text = (Int32.Parse(score.text) - 50).ToString();
-        StartRound();
-    }
-
-    private void StartRound() {
-        PrefabLoader prefabLoader = camera.GetComponent<PrefabLoader>();
-        for (int i = 0; i < prefabLoader.activeCards.Count; i++)
-        {
-            GameObject cloneObjects = prefabLoader.activeCards[i];
-            Debug.Log(cloneObjects.name);
-            Destroy(cloneObjects);
-            
-        }
-        prefabLoader.activeCards.Clear();
-        prefabLoader.createRandomPrefabs();
     }
 }
