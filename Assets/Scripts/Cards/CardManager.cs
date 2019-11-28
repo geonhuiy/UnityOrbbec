@@ -35,19 +35,36 @@ public class CardManager : MonoBehaviour
         AssignSprites();
     }
 
-    public void CheckAnswer() {
+    public void CheckAnswer()
+    {
         //check if answer is correct, if correct, add 50 to score, if incorrect minus 50 from score
-        if (selectedCard == correctCard+1) {
+        if (selectedCard == correctCard + 1)
+        {
             Debug.Log("correct");
-            scoreDisplay.text = (Int32.Parse(scoreDisplay.text) + 50).ToString(); 
-            
-        } else {
+            FindObjectOfType<SoundManager>().Play("correctAnswer");
+            scoreDisplay.text = (Int32.Parse(scoreDisplay.text) + 50).ToString();
+        }
+        else
+        {
             Debug.Log("incorrect");
-            scoreDisplay.text = (Int32.Parse(scoreDisplay.text) - 50).ToString(); 
+            FindObjectOfType<SoundManager>().Play("incorrectAnswer");
+            scoreDisplay.text = (Int32.Parse(scoreDisplay.text) - 50).ToString();
         }
         AssignSprites();
 
         //after checking for score, move to end round
+        EndRound();
+    }
+
+    private void EndRound()
+    {
+        // end round is display answer result and feedback to player
+        StartRound();
+    }
+
+    private void StartRound()
+    {
+        AssignSprites();
     }
 
     public void AssignSprites()
