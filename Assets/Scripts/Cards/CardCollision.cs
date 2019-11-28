@@ -13,6 +13,7 @@ public class CardCollision : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Trigger entered");
         if (CardManager.instance.selectedCard == 0)
         {
             CardManager.instance.selectedCard = cardNum;
@@ -21,6 +22,7 @@ public class CardCollision : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
+        Debug.Log("Trigger exit");
         if (cardNum == CardManager.instance.selectedCard) {
             CardManager.instance.selectedCard = 0;
         }
