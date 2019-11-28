@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Blueberry
   cardImage: {fileID: 21300000, guid: a350d888e1a514654a85d61f28fe289b, type: 3}
-  cardType: 3
+  cardType: 7

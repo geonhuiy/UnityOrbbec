@@ -14,7 +14,7 @@ public class ProgessOnHover : MonoBehaviour
     public Transform Radial;
 
     // When you enter the collider 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "object" || collision.gameObject.tag == "user_interactable" || collision.gameObject.tag == "tutorialButton") {
             isHovering = true;
@@ -66,5 +66,5 @@ public class ProgessOnHover : MonoBehaviour
         Radial.gameObject.SetActive(false);
         currentAmount = 0;
         hoverTime = 0;
-    }
+    }*/
 }

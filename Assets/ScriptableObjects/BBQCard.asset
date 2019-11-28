@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: BBQ
   cardImage: {fileID: 21300000, guid: eca29fb6a034445728ca48a3cf1e2335, type: 3}
-  cardType: 0
+  cardType: 6

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Kiwi
   cardImage: {fileID: 21300000, guid: 7e2dda9561e8e4c6488f31eab4f8c249, type: 3}
-  cardType: 3
+  cardType: 11

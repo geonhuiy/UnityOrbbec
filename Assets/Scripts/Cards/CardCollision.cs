@@ -24,15 +24,9 @@ public class CardCollision : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         hoverTime = 0;
-        isHovering = true;
         Debug.Log("Trigger entered");
-        if(other.gameObject.tag == "handObject"){
-            if (CardManager.instance.selectedCard == 0)
-            {
-                CardManager.instance.selectedCard = cardNum;
-            }
-        }
-        
+            isHovering = true;
+
     }
 
     /*private void OnTriggerStay2D(Collider2D collision)
@@ -46,12 +40,6 @@ public class CardCollision : MonoBehaviour
     {
         Debug.Log("Trigger exit");
         isHovering = false;
-        hoverTime = 0;
-        if (cardNum == CardManager.instance.selectedCard)
-        {
-            CardManager.instance.selectedCard = 0;
-        }
-
     }
 
     // Keep updating the scale of a card objects according to the isHovering status in each frame
@@ -62,24 +50,22 @@ public class CardCollision : MonoBehaviour
         if (isHovering)
         {
             transform.localScale = Vector2.Lerp(transform.localScale, newScale, speed * Time.deltaTime);
-        }
-        else
-        {
-            transform.localScale = Vector2.Lerp(transform.localScale, normalScale, speed * Time.deltaTime);
-        }
-        if (isHovering)
-        {
             hoverTime += Time.deltaTime;
             //Debug.Log(hoverTime);
 
             // when hover time goes over max hover time, stop checking for hover and start the check 
             // answer progress, the stop is to stop the check answer function getting called repeatedly
-            if (hoverTime >= maxHoverTime)
+            if (hoverTime > maxHoverTime)
             {
                 isHovering = false;
                 hoverTime = 0;
+                CardManager.instance.selectedCard = cardNum;
                 CardManager.instance.CheckAnswer();
             }
-        } 
+        }
+        else
+        {
+            transform.localScale = Vector2.Lerp(transform.localScale, normalScale, speed * Time.deltaTime);
+        }
     }
 }

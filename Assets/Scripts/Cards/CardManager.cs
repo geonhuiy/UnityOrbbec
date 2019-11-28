@@ -32,52 +32,25 @@ public class CardManager : MonoBehaviour
         //Set current to CardManager
         instance = this;
         DontDestroyOnLoad(this);
-        
-    }
-
-    private void Start() {
-        cardCanvas.gameObject.SetActive(false);
-        ShowTutorial();
-    }
-
-    public void ShowTutorial() {
-        tutorialCount++;
-        if(tutorialCount > 3) {
-            InitGame();
-        } else {
-            tutorialScreen.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Tutorial/Tutorial Sample "+ tutorialCount);
-        }
-
-    }
-    private void InitGame() {
-        cardCanvas.gameObject.SetActive(true);
-        StartRound();
-    }
-
-    private void EndRound() {
-        // end round is display answer result and feedback to player
-        StartRound();
-    }
-
-    private void StartRound() {
         AssignSprites();
     }
-    
+
     public void CheckAnswer() {
         //check if answer is correct, if correct, add 50 to score, if incorrect minus 50 from score
         if (selectedCard == correctCard+1) {
             Debug.Log("correct");
             scoreDisplay.text = (Int32.Parse(scoreDisplay.text) + 50).ToString(); 
+            
         } else {
             Debug.Log("incorrect");
             scoreDisplay.text = (Int32.Parse(scoreDisplay.text) - 50).ToString(); 
         }
+        AssignSprites();
 
         //after checking for score, move to end round
-        EndRound();
     }
 
-    private void AssignSprites()
+    public void AssignSprites()
     {
         //Creates a list from Card array for later removal
         List<Card> activeCards = new List<Card>(cardNames);

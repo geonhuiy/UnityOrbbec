@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Fridge
   cardImage: {fileID: 21300000, guid: 5b1d23e08b21048e892e9c8fcffa76f7, type: 3}
-  cardType: 3
+  cardType: 10
