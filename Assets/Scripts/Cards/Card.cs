@@ -12,5 +12,5 @@ public class Card : ScriptableObject
     public CardType cardType;
 }
 public enum CardType {
-    Brocolli,Coffee,Banana,Wine,Rose,Fork,BBQ,Blueberry,Chocolate,Fish,Fridge,Kiwi,MincedMeat,Orange,RyeBread,Strawberry,Tomato,WoodenSpoon
+    Parsakaali, Kahvi, Banaani, Viini, Ruusu, Haarukka, Grilli, Mustikka, Suklaa, Kala, Jääkaappi, Kiivi, Jauheliha, Appelsiini, Ruisleipä, Mansikka, Tomaatti, Puulusikka
 }
