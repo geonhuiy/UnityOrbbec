@@ -43,6 +43,7 @@ public class CardCollision : MonoBehaviour
     {
         Debug.Log("Trigger exit");
         isHovering = false;
+        hoverTime = 0;
         if (cardNum == CardManager.instance.selectedCard) {
             CardManager.instance.selectedCard = 0;
         }
@@ -73,11 +74,16 @@ public class CardCollision : MonoBehaviour
         if(isHovering) {
             hoverTime += Time.deltaTime;
             Debug.Log(hoverTime);
+
+            // when hover time goes over max hover time, stop checking for hover and start the check 
+            // answer progress, the stop is to stop the check answer function getting called repeatedly
+            if(hoverTime >= maxHoverTime) {
+                isHovering = false;
+                hoverTime = 0;
+                CardManager.instance.CheckAnswer();
+            }
         }
-    }
 
-    private void CheckAnswer() {
-
+        
     }
-    
 }

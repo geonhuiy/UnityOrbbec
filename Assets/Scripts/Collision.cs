@@ -12,7 +12,7 @@ public class Collision : MonoBehaviour
     public Text display;
     public Text score;
 
-    public GameObject camera;
+    public GameObject sceneCamera;
 
     private GameObject handObj, targetObj;
     private Collider2D targetObjCollider;
@@ -62,7 +62,7 @@ public class Collision : MonoBehaviour
 
     private void OnCorrectAnswer()
     {
-        PrefabLoader name = camera.GetComponent<PrefabLoader>();
+        PrefabLoader name = sceneCamera.GetComponent<PrefabLoader>();
         for (int i = 0; i < name.activeCards.Count; i++)
         {
             GameObject cloneObjects = name.activeCards[i];
