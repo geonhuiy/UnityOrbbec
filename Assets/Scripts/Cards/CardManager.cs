@@ -8,6 +8,8 @@ public class CardManager : MonoBehaviour
     //Card manager singleton
     public static CardManager instance;
     public Text scoreDisplay;
+    public Canvas cardCanvas;
+    public GameObject tutorialScreen;
     private int tutorialCount = 0;
     //Placeholder empty GameObjects in the scene
     [SerializeField]
@@ -32,25 +34,23 @@ public class CardManager : MonoBehaviour
         DontDestroyOnLoad(this);
         AssignSprites();
     }
-    private void InitGame() {
-        AssignSprites();
-    }
-    
+
     public void CheckAnswer() {
         //check if answer is correct, if correct, add 50 to score, if incorrect minus 50 from score
         if (selectedCard == correctCard+1) {
             Debug.Log("correct");
             scoreDisplay.text = (Int32.Parse(scoreDisplay.text) + 50).ToString(); 
+            
         } else {
             Debug.Log("incorrect");
             scoreDisplay.text = (Int32.Parse(scoreDisplay.text) - 50).ToString(); 
         }
+        AssignSprites();
 
         //after checking for score, move to end round
-        AssignSprites();
     }
 
-    private void AssignSprites()
+    public void AssignSprites()
     {
         //Creates a list from Card array for later removal
         List<Card> activeCards = new List<Card>(cardNames);

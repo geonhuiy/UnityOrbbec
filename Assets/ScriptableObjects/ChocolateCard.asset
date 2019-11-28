@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Chocolate
   cardImage: {fileID: 21300000, guid: fbb671e8ac8cd45db8ba70a60a20c716, type: 3}
-  cardType: 3
+  cardType: 8

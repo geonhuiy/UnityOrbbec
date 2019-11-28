@@ -20,7 +20,7 @@ public class TutorialManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(this);
         cardCanvas.gameObject.SetActive(false);
-        //ShowTutorial();
+        ShowTutorial();
     }
 
     public void ShowTutorial()
@@ -39,6 +39,8 @@ public class TutorialManager : MonoBehaviour
     private void InitGame()
     {
         cardCanvas.gameObject.SetActive(true);
+        CardManager.instance.AssignSprites();
+        tutorialScreen.gameObject.SetActive(false);
     }
 
 

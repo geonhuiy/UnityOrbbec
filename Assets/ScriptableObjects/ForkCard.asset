@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Fork
   cardImage: {fileID: 21300000, guid: 8c8472103a884674393fbf32de08ad51, type: 3}
-  borderColor: {r: 0, g: 0, b: 0, a: 0}
   cardType: 5

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Orange
   cardImage: {fileID: 21300000, guid: d5b8c2d9af1f84302ae38b442982b892, type: 3}
-  cardType: 3
+  cardType: 13

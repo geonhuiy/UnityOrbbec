@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Banana
   cardImage: {fileID: 21300000, guid: 1daeab5c3c7cb624aa3747cf06e869ba, type: 3}
-  borderColor: {r: 0, g: 0, b: 0, a: 0}
   cardType: 2

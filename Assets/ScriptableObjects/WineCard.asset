@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Wine
   cardImage: {fileID: 21300000, guid: 038a23c7da346b940b3940df841b3ab3, type: 3}
-  borderColor: {r: 0.9622642, g: 0.3686871, b: 0, a: 1}
   cardType: 3
