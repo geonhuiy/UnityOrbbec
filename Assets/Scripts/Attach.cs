@@ -6,7 +6,7 @@ public class Attach : MonoBehaviour
 {
     // Update is called once per frame
     private Vector3 mousePosition;
-    public float moveSpeed = 0.1f; 
+    public float moveSpeed = 1.0f; 
     void Update()
     {
         mousePosition = Input.mousePosition;

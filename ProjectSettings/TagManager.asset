@@ -16,9 +16,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Background
+  - Card
+  - Hand
   - 
   - 
   - 
@@ -44,9 +44,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Card
-    uniqueID: 2886862691
+  - name: BackgroundCanvas
+    uniqueID: 927246059
     locked: 0
-  - name: Hand
-    uniqueID: 3958794291
+  - name: HandCanvas
+    uniqueID: 700837231
     locked: 0
