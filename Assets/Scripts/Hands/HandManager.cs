@@ -21,8 +21,30 @@ public class HandManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    private void checkCollidingHand() {
-        
+    private void checkCollidingHand()
+    {
+        Collider2D leftCollider = leftHand.GetComponent<Collider2D>();
+        Collider2D rightCollider = rightHand.GetComponent<Collider2D>();
+        List<GameObject> cardObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("card"));
+        foreach (var i in cardObjects)
+        {
+            if(leftCollider.IsTouching(i.GetComponent<Collider2D>())) {
+                rightCollider.enabled = false;
+            }
+            //rightCollider.enabled = true;
+            else if(rightCollider.IsTouching(i.GetComponent<Collider2D>())) {
+                leftCollider.enabled = false;
+            }
+            else {
+                leftCollider.enabled = true;
+                rightCollider.enabled = true;
+            }
+            //leftCollider.enabled = true;
+        }
+    }
+    void Update()
+    {
+        checkCollidingHand();
     }
 
 

@@ -8,6 +8,7 @@ TagManager:
   - target
   - object
   - tutorialButton
+  - card
   layers:
   - Default
   - TransparentFX
