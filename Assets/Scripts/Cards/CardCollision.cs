@@ -23,7 +23,7 @@ public class CardCollision : MonoBehaviour
     isHovering becomes true*/
     private void OnTriggerEnter2D(Collider2D other)
     {
-        isHovering = true;
+        Debug.Log("Trigger entered");
         if (CardManager.instance.selectedCard == 0)
         {
             CardManager.instance.selectedCard = cardNum;
@@ -39,9 +39,8 @@ public class CardCollision : MonoBehaviour
     // When the collision ends between a mouse(for test) or hands, isHovering becomes false 
     void OnTriggerExit2D(Collider2D other)
     {
-        isHovering = false;
-        if (cardNum == CardManager.instance.selectedCard)
-        {
+        Debug.Log("Trigger exit");
+        if (cardNum == CardManager.instance.selectedCard) {
             CardManager.instance.selectedCard = 0;
         }
 
