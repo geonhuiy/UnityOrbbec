@@ -7,7 +7,8 @@ public class TutorialManager : MonoBehaviour
     public static TutorialManager instance;
     public Canvas cardCanvas;
     public GameObject tutorialScreen;
-    private int tutorialCount = 1;
+    public Canvas tutorialCanvas;
+    private int tutorialCount = 0;
     void Awake()
     {
         //Ensures that only one instance of TutorialManager exists
@@ -20,6 +21,11 @@ public class TutorialManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(this);
         cardCanvas.gameObject.SetActive(false);
+        ShowTutorial();
+    }
+    public void ResetTutorial() {
+        tutorialCount = 0;
+        tutorialCanvas.gameObject.SetActive(true);
         ShowTutorial();
     }
 
@@ -45,7 +51,7 @@ public class TutorialManager : MonoBehaviour
         //Random card generation on the game canvas
         CardManager.instance.AssignSprites();
         //Disables the tutorial canvas
-        tutorialScreen.gameObject.SetActive(false);
+        tutorialCanvas.gameObject.SetActive(false);
     }
 
 

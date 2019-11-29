@@ -8,8 +8,6 @@ public class CardManager : MonoBehaviour
     //Card manager singleton
     public static CardManager instance;
     public Text scoreDisplay;
-    public Canvas cardCanvas;
-    public GameObject tutorialScreen;
     private int tutorialCount = 0;
     //Placeholder empty GameObjects in the scene
     [SerializeField]
@@ -21,6 +19,12 @@ public class CardManager : MonoBehaviour
     private List<string> currentCardName = new List<string>();
     public int selectedCard;
     private int correctCard;
+    private int guessCount = 0;
+    public Canvas cardCanvas;
+    public Canvas endGameCanvas;
+    public Text resultText;
+    private int score = 0;
+
     void Awake()
     {
         //Ensures that only one instance of CardManager exists
@@ -35,23 +39,31 @@ public class CardManager : MonoBehaviour
         AssignSprites();
     }
 
+    public void ResetGame() {
+        guessCount = 0;
+        scoreDisplay.text = "0";
+        endGameCanvas.gameObject.SetActive(false);
+    }
+
     public void CheckAnswer()
     {
+        guessCount++;
         //check if answer is correct, if correct, add 50 to score, if incorrect minus 50 from score
         if (selectedCard == correctCard + 1)
         {
             Debug.Log("correct");
             FindObjectOfType<SoundManager>().Play("correctAnswer");
-            scoreDisplay.text = (Int32.Parse(scoreDisplay.text) + 50).ToString();
+            score += 50;
+            scoreDisplay.text = score.ToString();
         }
         else
         {
             Debug.Log("incorrect");
             FindObjectOfType<SoundManager>().Play("incorrectAnswer");
-            scoreDisplay.text = (Int32.Parse(scoreDisplay.text) - 50).ToString();
+            score -= 20;
+            scoreDisplay.text = score.ToString();
         }
-        AssignSprites();
-
+        
         //after checking for score, move to end round
         EndRound();
     }
@@ -59,12 +71,18 @@ public class CardManager : MonoBehaviour
     private void EndRound()
     {
         // end round is display answer result and feedback to player
-        StartRound();
+        if(guessCount < 3) {
+            // start the next round
+            AssignSprites();
+        } else {
+            EndGame();
+        }
     }
 
-    private void StartRound()
-    {
-        AssignSprites();
+    private void EndGame() {
+        cardCanvas.gameObject.SetActive(false);
+        endGameCanvas.gameObject.SetActive(true);
+        resultText.text = "Hyvaa!!!! Sinulla on "+ score.ToString()+" pisteet!!";
     }
 
     public void AssignSprites()
