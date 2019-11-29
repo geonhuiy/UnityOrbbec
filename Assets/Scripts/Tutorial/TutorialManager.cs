@@ -7,8 +7,7 @@ public class TutorialManager : MonoBehaviour
     public static TutorialManager instance;
     public Canvas cardCanvas;
     public GameObject tutorialScreen;
-    public Canvas tutorialCanvas;
-    private int tutorialCount = 0;
+    private int tutorialCount = 1;
     void Awake()
     {
         //Ensures that only one instance of TutorialManager exists
@@ -23,19 +22,12 @@ public class TutorialManager : MonoBehaviour
         cardCanvas.gameObject.SetActive(false);
         ShowTutorial();
     }
-    public void ResetTutorial() {
-        tutorialCount = 0;
-        tutorialCanvas.gameObject.SetActive(true);
-        ShowTutorial();
-    }
 
     public void ShowTutorial()
     {
-        //Increments the tutorial sprite each time next button is pressed/hovered on
         tutorialCount++;
         if (tutorialCount > 3)
         {
-            //Starts the game after the tutorial count
             InitGame();
         }
         else
@@ -46,12 +38,9 @@ public class TutorialManager : MonoBehaviour
 
     private void InitGame()
     {
-        //Loads the game canvas 
         cardCanvas.gameObject.SetActive(true);
-        //Random card generation on the game canvas
         CardManager.instance.AssignSprites();
-        //Disables the tutorial canvas
-        tutorialCanvas.gameObject.SetActive(false);
+        tutorialScreen.gameObject.SetActive(false);
     }
 
 
