@@ -169,7 +169,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5113809}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 107a277f45f335d44822979ce5a81c03, type: 3}
   m_Name: 
@@ -3088,9 +3088,9 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - name: theme
-    clip: {fileID: 8300000, guid: e4424b4cfedb446579e64c218dfd88a1, type: 3}
-    volumn: 0.3
-    pitch: 1
+    clip: {fileID: 8300000, guid: 98adb6c3e0e414502a882c916cfba8d9, type: 3}
+    volumn: 0
+    pitch: 0
     source: {fileID: 0}
 --- !u!4 &1561268852
 Transform:
