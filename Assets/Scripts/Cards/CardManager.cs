@@ -12,6 +12,7 @@ public class CardManager : MonoBehaviour
     public Canvas cardCanvas;
     public GameObject tutorialScreen;
     public GameObject correctImage, failImage;
+    public GameObject leftHand, RightHand;
     private float feedbackDisplayTime = 2.0f;
     private float feedbackCounter = 0;
     private bool showWrongAnswerFeedback;
@@ -58,11 +59,16 @@ public class CardManager : MonoBehaviour
             {
                 failImage.SetActive(true);
                 print(feedbackCounter);
+                RightHand.SetActive(false);
+                leftHand.SetActive(false);
             }
             else
             {
                 failImage.SetActive(false);
-                showRightAnswerFeedback = false;
+                showWrongAnswerFeedback = false;
+                feedbackCounter = 0;
+                RightHand.SetActive(true);
+                leftHand.SetActive(true);
 
             }
             feedbackCounter += Time.deltaTime;
@@ -72,11 +78,16 @@ public class CardManager : MonoBehaviour
             if (feedbackCounter < feedbackDisplayTime)
             {
                 correctImage.SetActive(true);
+                RightHand.SetActive(false);
+                leftHand.SetActive(false);
             }
             else
             {
                 correctImage.SetActive(false);
                 showRightAnswerFeedback = false;
+                feedbackCounter = 0;
+                RightHand.SetActive(true);
+                leftHand.SetActive(true);
 
             }
             feedbackCounter += Time.deltaTime;
