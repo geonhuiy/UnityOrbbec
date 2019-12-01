@@ -7,12 +7,18 @@ public class EndButtonScript : MonoBehaviour
     // Start is called before the first frame update
     private float hoverTime = 0;
     private bool isHovering = false;
-    private float maxHoverTime = 2;
-    public Canvas endGameCanvas, cardCanvas;
+    private float maxHoverTime = 2.0f;
+    public Canvas endGameCanvas;
     // Start is called before the first frame update
+
+    private Vector2 newScale = new Vector2(27.00f, 27.00f);
+    private Vector2 normalScale = new Vector2(20.363f, 20.363f);
+    private float speed = 3.0f;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "handObject") {
+        if (collision.gameObject.tag == "handObject")
+        {
             isHovering = true;
         }
         hoverTime = 0;
@@ -28,21 +34,28 @@ public class EndButtonScript : MonoBehaviour
         isHovering = false;
     }
 
-    void Update() {
-        if(isHovering) {
+    void Update()
+    {
+
+        if (isHovering)
+        {
             hoverTime += Time.deltaTime;
+            transform.localScale = Vector2.Lerp(transform.localScale, newScale, speed * Time.deltaTime);
             //Debug.Log(hoverTime);
 
             // when hover time goes over max hover time, stop checking for hover and start the check 
             // answer progress, the stop is to stop the check answer function getting called repeatedly
-            if(hoverTime >= maxHoverTime) {
+            if (hoverTime >= maxHoverTime)
+            {
                 isHovering = false;
                 hoverTime = 0;
                 endGameCanvas.gameObject.SetActive(false);
-                //TutorialManager.instance.ResetTutorial();
-                cardCanvas.gameObject.SetActive(true);
-                CardManager.instance.ResetGame();
+                TutorialManager.instance.ResetTutorial();
             }
+        }
+        else
+        {
+            transform.localScale = Vector2.Lerp(transform.localScale, normalScale, speed * Time.deltaTime);
         }
     }
 }
