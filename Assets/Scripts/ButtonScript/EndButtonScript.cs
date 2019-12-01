@@ -8,7 +8,7 @@ public class EndButtonScript : MonoBehaviour
     private float hoverTime = 0;
     private bool isHovering = false;
     private float maxHoverTime = 2;
-    public Canvas endGameCanvas;
+    public Canvas endGameCanvas, cardCanvas;
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -39,7 +39,9 @@ public class EndButtonScript : MonoBehaviour
                 isHovering = false;
                 hoverTime = 0;
                 endGameCanvas.gameObject.SetActive(false);
-                TutorialManager.instance.ResetTutorial();
+                //TutorialManager.instance.ResetTutorial();
+                cardCanvas.gameObject.SetActive(true);
+                CardManager.instance.ResetGame();
             }
         }
     }

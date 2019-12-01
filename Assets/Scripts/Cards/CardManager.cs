@@ -99,6 +99,7 @@ public class CardManager : MonoBehaviour
     public void ResetGame() {
         guessCount = 0;
         scoreDisplay.text = "0";
+        score = 0;
         endGameCanvas.gameObject.SetActive(false);
     }
 
