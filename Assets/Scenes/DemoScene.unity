@@ -847,7 +847,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &475339944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1670,6 +1670,8 @@ MonoBehaviour:
   tutorialScreen: {fileID: 1806008325}
   correctImage: {fileID: 1577315829}
   failImage: {fileID: 755113653}
+  leftHand: {fileID: 5113809}
+  RightHand: {fileID: 1614256980}
   placeholders:
   - {fileID: 1483425943}
   - {fileID: 649121752}
@@ -2970,7 +2972,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1551909380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3151,6 +3153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endGameCanvas: {fileID: 1383728107}
+  cardCanvas: {fileID: 0}
 --- !u!210 &1574458089
 SortingGroup:
   m_ObjectHideFlags: 0
