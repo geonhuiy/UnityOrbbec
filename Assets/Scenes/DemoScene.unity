@@ -3153,7 +3153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endGameCanvas: {fileID: 1383728107}
-  cardCanvas: {fileID: 0}
+  cardCanvas: {fileID: 1486314355}
 --- !u!210 &1574458089
 SortingGroup:
   m_ObjectHideFlags: 0
