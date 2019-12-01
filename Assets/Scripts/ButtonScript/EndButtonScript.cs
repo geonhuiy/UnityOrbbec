@@ -8,7 +8,7 @@ public class EndButtonScript : MonoBehaviour
     private float hoverTime = 0;
     private bool isHovering = false;
     private float maxHoverTime = 2.0f;
-    public Canvas endGameCanvas;
+    public Canvas endGameCanvas, cardCanvas;
     // Start is called before the first frame update
 
     private Vector2 newScale = new Vector2(27.00f, 27.00f);
@@ -50,7 +50,10 @@ public class EndButtonScript : MonoBehaviour
                 isHovering = false;
                 hoverTime = 0;
                 endGameCanvas.gameObject.SetActive(false);
-                TutorialManager.instance.ResetTutorial();
+                cardCanvas.gameObject.SetActive(true);
+                CardManager.instance.ResetGame();
+                //TutorialManager.instance.ResetTutorial();
+
             }
         }
         else
