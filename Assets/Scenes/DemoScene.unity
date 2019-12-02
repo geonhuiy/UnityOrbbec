@@ -169,7 +169,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5113809}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 107a277f45f335d44822979ce5a81c03, type: 3}
   m_Name: 
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHoverTime: 2
-  speed: 50
+  speed: 33
   currentAmount: 0
   Radial: {fileID: 1253552324}
 --- !u!1 &112983594
@@ -3085,21 +3085,15 @@ MonoBehaviour:
     source: {fileID: 0}
   - loop: 0
     name: incorrectAnswer
-    clip: {fileID: 8300000, guid: e4424b4cfedb446579e64c218dfd88a1, type: 3}
+    clip: {fileID: 8300000, guid: de4062b8a43f340d7a71950a1a20d5b0, type: 3}
     volumn: 0.5
     pitch: 1
     source: {fileID: 0}
-  - loop: 0
-    name: soundClip
-    clip: {fileID: 8300000, guid: de4062b8a43f340d7a71950a1a20d5b0, type: 3}
-    volumn: 0.5
-    pitch: 0
-    source: {fileID: 0}
-  - loop: 0
-    name: soundTest
-    clip: {fileID: 8300000, guid: f98d841aa80b8614889e087315846b8f, type: 3}
-    volumn: 0.5
-    pitch: 0
+  - loop: 1
+    name: theme
+    clip: {fileID: 8300000, guid: e4424b4cfedb446579e64c218dfd88a1, type: 3}
+    volumn: 0.151
+    pitch: 1
     source: {fileID: 0}
 --- !u!4 &1561268852
 Transform:
@@ -3680,7 +3674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHoverTime: 2
-  speed: 50
+  speed: 33
   currentAmount: 0
   Radial: {fileID: 772584355}
 --- !u!1 &1716431253
