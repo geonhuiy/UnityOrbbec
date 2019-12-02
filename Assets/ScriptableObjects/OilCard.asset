@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c08da7e2b9a36e84590327237ba8954a, type: 3}
-  m_Name: MincedMeatCard
+  m_Name: OilCard
   m_EditorClassIdentifier: 
-  cardName: MincedMeat
-  cardImage: {fileID: 21300000, guid: 2a6b7417ade0b4bcba818a492553868e, type: 3}
+  cardName: Oil
+  cardImage: {fileID: 21300000, guid: 40744f7f678a8454baf630164ceb79db, type: 3}
   cardType: 12

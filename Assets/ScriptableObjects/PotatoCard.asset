@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c08da7e2b9a36e84590327237ba8954a, type: 3}
-  m_Name: ForkCard
+  m_Name: PotatoCard
   m_EditorClassIdentifier: 
-  cardName: Fork
-  cardImage: {fileID: 21300000, guid: 8c8472103a884674393fbf32de08ad51, type: 3}
+  cardName: Potato
+  cardImage: {fileID: 21300000, guid: b213c95bc80c6d74c9b83c18842d89ea, type: 3}
   cardType: 5

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c08da7e2b9a36e84590327237ba8954a, type: 3}
-  m_Name: FridgeCard
+  m_Name: SaladCard
   m_EditorClassIdentifier: 
-  cardName: Fridge
-  cardImage: {fileID: 21300000, guid: 5b1d23e08b21048e892e9c8fcffa76f7, type: 3}
+  cardName: Salad
+  cardImage: {fileID: 21300000, guid: 9f9fe24b07066424d935daf3bf971879, type: 3}
   cardType: 10

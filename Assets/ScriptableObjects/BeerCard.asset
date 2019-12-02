@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c08da7e2b9a36e84590327237ba8954a, type: 3}
-  m_Name: KiwiCard
+  m_Name: BeerCard
   m_EditorClassIdentifier: 
-  cardName: Kiwi
-  cardImage: {fileID: 21300000, guid: 7e2dda9561e8e4c6488f31eab4f8c249, type: 3}
+  cardName: Beer
+  cardImage: {fileID: 21300000, guid: f0cb1697f482ff744976273eab930875, type: 3}
   cardType: 11
