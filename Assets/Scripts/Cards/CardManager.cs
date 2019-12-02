@@ -48,7 +48,7 @@ public class CardManager : MonoBehaviour
         //Set current to CardManager
         instance = this;
         DontDestroyOnLoad(this);
-        AssignSprites();
+        //AssignSprites();
     }
     private void Update()
     {
