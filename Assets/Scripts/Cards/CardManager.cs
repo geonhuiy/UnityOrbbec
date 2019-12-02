@@ -103,6 +103,7 @@ public class CardManager : MonoBehaviour
         scoreDisplay.text = "0";
         score = 0;
         endGameCanvas.gameObject.SetActive(false);
+        AssignSprites();
     }
 
     public void CheckAnswer()
