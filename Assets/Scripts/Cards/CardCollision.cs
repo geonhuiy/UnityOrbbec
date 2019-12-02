@@ -12,7 +12,7 @@ public class CardCollision : MonoBehaviour
     private Vector2 normalScale = new Vector2(20.363f, 20.363f);
     private float speed = 3.0f;
     private float hoverTime = 0;
-    private float maxHoverTime = 2.0f;
+    private float maxHoverTime = 3.0f;
 
     void Awake()
     {
@@ -25,7 +25,7 @@ public class CardCollision : MonoBehaviour
     {
         hoverTime = 0;
         Debug.Log("Trigger entered");
-            isHovering = true;
+        isHovering = true;
 
     }
 

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c08da7e2b9a36e84590327237ba8954a, type: 3}
-  m_Name: CoffeeCard
+  m_Name: CoffeeMachineCard
   m_EditorClassIdentifier: 
-  cardName: Coffee
-  cardImage: {fileID: 21300000, guid: 98bbc0a8d666f9540abdfffeed7e812f, type: 3}
+  cardName: CoffeeMachine
+  cardImage: {fileID: 21300000, guid: 8f68ad6e2d51f2a4c92222fb2d781db2, type: 3}
   cardType: 1

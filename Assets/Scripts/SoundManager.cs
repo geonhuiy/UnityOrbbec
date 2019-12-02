@@ -15,6 +15,7 @@ public class SoundManager : MonoBehaviour
             s.source.clip = s.clip;
             s.source.volume = s.volumn;
             s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
             Debug.Log(s.source.volume);
         }
     }
@@ -22,6 +23,7 @@ public class SoundManager : MonoBehaviour
     void Start()
     {
         Play("theme");
+        Debug.Log("STARTED SOUND");
     }
 
     // Play function is public to play music in other script
@@ -29,5 +31,6 @@ public class SoundManager : MonoBehaviour
     {
         Sound s = Array.Find(sounds, sounds => sounds.name == name);
         s.source.Play();
+        Debug.Log("SOUNDS " + sounds.Length);
     }
 }
