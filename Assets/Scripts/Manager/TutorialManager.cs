@@ -9,6 +9,8 @@ public class TutorialManager : MonoBehaviour
     public GameObject tutorialScreen;
     public Canvas tutorialCanvas;
     private int tutorialCount = 0;
+    // start tutorial: true if want to start initial tutorial, false if to start the game instantly
+    public bool startTutorial;
     void Awake()
     {
         //Ensures that only one instance of TutorialManager exists
@@ -21,6 +23,11 @@ public class TutorialManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(this);
         cardCanvas.gameObject.SetActive(false);
+        if(startTutorial == false) {
+            tutorialCount = 3;
+        } else {
+            tutorialCount = 0;
+        }
         ShowTutorial();
     }
     public void ResetTutorial() {

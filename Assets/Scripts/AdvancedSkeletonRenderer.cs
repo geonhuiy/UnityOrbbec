@@ -11,6 +11,9 @@ public class AdvancedSkeletonRenderer : MonoBehaviour
     public LineRenderer torsoRenderer;
     public Transform leftHand;
     public Transform rightHand;
+    // calibration value is used to calirate the coefficient of the the range of movement of the user
+    // which allows the user to move more naturally in the game.
+    public float calibrationValue;
     private long _lastFrameIndex = -1;
 
     private Astra.Body[] _bodies;
@@ -158,7 +161,7 @@ public class AdvancedSkeletonRenderer : MonoBehaviour
                 // LEFT ARM
                 if (i == (int)Astra.JointType.LeftHand)
                 {
-                    leftHand.transform.position = new Vector3(skeletonJoint.transform.position.x*10,skeletonJoint.transform.position.y*10, 0) ;
+                    leftHand.transform.position = new Vector3(skeletonJoint.transform.position.x*calibrationValue,skeletonJoint.transform.position.y*calibrationValue, 0) ;
                     leftArmPos[0] = skeletonJoint.transform.position;
                 }
                 else if (i == (int)Astra.JointType.LeftWrist)
@@ -176,7 +179,7 @@ public class AdvancedSkeletonRenderer : MonoBehaviour
                 // RIGHT ARM
                 else if (i == (int)Astra.JointType.RightHand)
                 {
-                    rightHand.transform.position = new Vector3(skeletonJoint.transform.position.x*10,skeletonJoint.transform.position.y*10, 0) ;
+                    rightHand.transform.position = new Vector3(skeletonJoint.transform.position.x*calibrationValue,skeletonJoint.transform.position.y*calibrationValue, 0) ;
                     rightArmPos[0] = skeletonJoint.transform.position;
                 }
                 else if (i == (int)Astra.JointType.RightWrist)
