@@ -8,7 +8,6 @@ public class CardManager : MonoBehaviour
     //Card manager singleton
     public static CardManager instance;
     public Text scoreDisplay;
-
     public Canvas cardCanvas;
     public GameObject tutorialScreen;
     public GameObject correctImage, failImage;
@@ -49,6 +48,7 @@ public class CardManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(this);
         AssignSprites();
+
     }
     private void Update()
     {
@@ -61,6 +61,8 @@ public class CardManager : MonoBehaviour
                 print(feedbackCounter);
                 RightHand.SetActive(false);
                 leftHand.SetActive(false);
+
+
             }
             else
             {
@@ -95,8 +97,8 @@ public class CardManager : MonoBehaviour
         }
     }
 
-
-    public void ResetGame() {
+    public void ResetGame()
+    {
         guessCount = 0;
         scoreDisplay.text = "0";
         score = 0;
@@ -131,10 +133,13 @@ public class CardManager : MonoBehaviour
     private void EndRound()
     {
         // end round is display answer result and feedback to player
-        if (guessCount < 3) {
+        if (guessCount < 2)
+        {
             // start the next round
             AssignSprites();
-        } else {
+        }
+        else
+        {
             EndGame();
         }
     }
@@ -143,7 +148,16 @@ public class CardManager : MonoBehaviour
     {
         cardCanvas.gameObject.SetActive(false);
         endGameCanvas.gameObject.SetActive(true);
-        resultText.text = "Hyvaa!!!! Sinulla on " + score.ToString() + " pisteet!!";
+
+        if (score <= 0)
+        {
+            resultText.text = "Hyvää!" + System.Environment.NewLine + " Kiitos pelaamisesta";
+        }
+        else
+        {
+            resultText.text = "Hyvää! " + score.ToString() + " pistettä!";
+        }
+
 
         //public void CheckAnswer() {
         //    //check if answer is correct, if correct, add 50 to score, if incorrect minus 50 from score
@@ -165,35 +179,35 @@ public class CardManager : MonoBehaviour
         //
     }
 
-        public void AssignSprites()
+    public void AssignSprites()
+    {
+        //Creates a list from Card array for later removal
+        List<Card> activeCards = new List<Card>(cardNames);
+        //clear list for old card name before assign new ones
+        currentCardName.Clear();
+        //Loads a sprite for each placeholder
+        for (int i = 0; i < placeholders.Length; ++i)
         {
-            //Creates a list from Card array for later removal
-            List<Card> activeCards = new List<Card>(cardNames);
-            //clear list for old card name before assign new ones
-            currentCardName.Clear();
-            //Loads a sprite for each placeholder
-            for (int i = 0; i < placeholders.Length; ++i)
-            {
-                //Chooses a random number below the Card count
-                int rand = UnityEngine.Random.Range(0, activeCards.Count);
-                //Instantiates a Card at position rand
-                Card randCard = activeCards[rand];
-                //Sets the sprite of placeholder GameObject to the sprite component of randCard
-                placeholders[i].GetComponent<SpriteRenderer>().sprite = randCard.cardImage;
-                //Removes the randCard to prevent duplicate sprites from being selected
-                activeCards.Remove(randCard);
-                //add name of randcard to card name list for display
-                currentCardName.Add(randCard.cardType.ToString());
-            }
-            RandomText();
+            //Chooses a random number below the Card count
+            int rand = UnityEngine.Random.Range(0, activeCards.Count);
+            //Instantiates a Card at position rand
+            Card randCard = activeCards[rand];
+            //Sets the sprite of placeholder GameObject to the sprite component of randCard
+            placeholders[i].GetComponent<SpriteRenderer>().sprite = randCard.cardImage;
+            //Removes the randCard to prevent duplicate sprites from being selected
+            activeCards.Remove(randCard);
+            //add name of randcard to card name list for display
+            currentCardName.Add(randCard.cardType.ToString());
         }
-
-
-        private void RandomText()
-        {
-            //Selects a random card name from the 3 cards shown
-            int rand = UnityEngine.Random.Range(0, currentCardName.Count);
-            randomText.text = currentCardName[rand];
-            correctCard = rand;
-        }
+        RandomText();
     }
+
+
+    private void RandomText()
+    {
+        //Selects a random card name from the 3 cards shown
+        int rand = UnityEngine.Random.Range(0, currentCardName.Count);
+        randomText.text = currentCardName[rand];
+        correctCard = rand;
+    }
+}

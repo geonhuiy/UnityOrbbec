@@ -7,12 +7,12 @@ public class EndButtonScript : MonoBehaviour
     // Start is called before the first frame update
     private float hoverTime = 0;
     private bool isHovering = false;
-    private float maxHoverTime = 2.0f;
+    private float maxHoverTime = 3.0f;
     public Canvas endGameCanvas, cardCanvas;
     // Start is called before the first frame update
 
-    private Vector2 newScale = new Vector2(27.00f, 27.00f);
-    private Vector2 normalScale = new Vector2(20.363f, 20.363f);
+    private Vector2 newScale = new Vector2(15f, 15f);
+    private Vector2 normalScale = new Vector2(10f, 10f);
     private float speed = 3.0f;
 
     private void OnTriggerEnter2D(Collider2D collision)
