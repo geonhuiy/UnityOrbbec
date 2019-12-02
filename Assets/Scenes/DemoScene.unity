@@ -847,7 +847,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &475339944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2416,6 +2416,7 @@ MonoBehaviour:
   torsoRenderer: {fileID: 2051070464}
   leftHand: {fileID: 5113810}
   rightHand: {fileID: 1614256981}
+  calibrationValue: 0
   JointPrefab: {fileID: 100000, guid: 1190a34979a38ae4db353c77e7cd2281, type: 3}
   JointRoot: {fileID: 0}
   ToggleSeg: {fileID: 0}
@@ -2649,7 +2650,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1383728105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2972,7 +2973,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1551909380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2988,6 +2989,7 @@ MonoBehaviour:
   cardCanvas: {fileID: 1486314355}
   tutorialScreen: {fileID: 1806008325}
   tutorialCanvas: {fileID: 475339946}
+  startTutorial: 0
 --- !u!4 &1551909381
 Transform:
   m_ObjectHideFlags: 0

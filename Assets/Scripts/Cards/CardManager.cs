@@ -29,6 +29,7 @@ public class CardManager : MonoBehaviour
     public int selectedCard;
     private int correctCard;
     private int guessCount = 0;
+    public int numberOfRound;
 
     public Canvas endGameCanvas;
     public Text resultText;
@@ -133,7 +134,7 @@ public class CardManager : MonoBehaviour
     private void EndRound()
     {
         // end round is display answer result and feedback to player
-        if (guessCount < 2)
+        if (guessCount < numberOfRound)
         {
             // start the next round
             AssignSprites();
