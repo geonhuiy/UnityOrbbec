@@ -1697,6 +1697,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 783bcc2d7b6ff4d56a25ac73f15eba3c, type: 2}
   randomText: {fileID: 1716431255}
   selectedCard: 0
+  numberOfRound: 5
   endGameCanvas: {fileID: 1383728107}
   resultText: {fileID: 1583781217}
 --- !u!4 &773442262
