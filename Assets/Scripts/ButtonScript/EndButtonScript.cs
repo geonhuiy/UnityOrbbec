@@ -11,8 +11,8 @@ public class EndButtonScript : MonoBehaviour
     public Canvas endGameCanvas, cardCanvas;
     // Start is called before the first frame update
 
-    private Vector2 newScale = new Vector2(15f, 15f);
-    private Vector2 normalScale = new Vector2(10f, 10f);
+    private Vector2 newScale = new Vector2(20f, 20f);
+    private Vector2 normalScale = new Vector2(15f, 15f);
     private float speed = 3.0f;
 
     private void OnTriggerEnter2D(Collider2D collision)

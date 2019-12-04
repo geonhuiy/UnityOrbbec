@@ -25,7 +25,7 @@ public class CardManager : MonoBehaviour
     private Card[] cardNames;
     [SerializeField]
     private Text randomText;
-    private List<string> currentCardName = new List<string>();
+    public List<string> currentCardName = new List<string>();
     public int selectedCard;
     private int correctCard;
     private int guessCount = 0;
@@ -133,7 +133,7 @@ public class CardManager : MonoBehaviour
     private void EndRound()
     {
         // end round is display answer result and feedback to player
-        if (guessCount < 2)
+        if (guessCount < 5)
         {
             // start the next round
             AssignSprites();
@@ -151,11 +151,11 @@ public class CardManager : MonoBehaviour
 
         if (score <= 0)
         {
-            resultText.text = "Hyvää!" + System.Environment.NewLine + " Kiitos pelaamisesta";
+            resultText.text = "Hyvä!" + System.Environment.NewLine + " Kiitos pelaamisesta";
         }
         else
         {
-            resultText.text = "Hyvää! " + score.ToString() + " pistettä!";
+            resultText.text = "Hyvä! " + score.ToString() + " pistettä!";
         }
 
 

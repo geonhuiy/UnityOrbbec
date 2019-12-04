@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -550, y: 0}
+  m_AnchoredPosition: {x: -449.5, y: 78}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5113811
@@ -243,10 +243,10 @@ CapsuleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: -4.928169, y: -7.5817933}
-  m_Size: {x: 49.023407, y: 69.23613}
+  m_Offset: {x: -3.710473, y: 2}
+  m_Size: {x: 53, y: 95}
   m_Direction: 0
 --- !u!114 &5113817
 MonoBehaviour:
@@ -847,7 +847,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &475339944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1696,6 +1696,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 50bb7edb629d0dd48bd9e623543afd8f, type: 2}
   - {fileID: 11400000, guid: 783bcc2d7b6ff4d56a25ac73f15eba3c, type: 2}
   randomText: {fileID: 1716431255}
+  currentCardName: []
   selectedCard: 0
   endGameCanvas: {fileID: 1383728107}
   resultText: {fileID: 1583781217}
@@ -2416,6 +2417,7 @@ MonoBehaviour:
   torsoRenderer: {fileID: 2051070464}
   leftHand: {fileID: 5113810}
   rightHand: {fileID: 1614256981}
+  calibrationValue: 0
   JointPrefab: {fileID: 100000, guid: 1190a34979a38ae4db353c77e7cd2281, type: 3}
   JointRoot: {fileID: 0}
   ToggleSeg: {fileID: 0}
@@ -2972,7 +2974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1551909380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2988,6 +2990,7 @@ MonoBehaviour:
   cardCanvas: {fileID: 1486314355}
   tutorialScreen: {fileID: 1806008325}
   tutorialCanvas: {fileID: 475339946}
+  startTutorial: 0
 --- !u!4 &1551909381
 Transform:
   m_ObjectHideFlags: 0
@@ -3137,7 +3140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1574458086}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -132, z: 0}
+  m_LocalPosition: {x: 285, y: -107, z: 0}
   m_LocalScale: {x: 7.204908, y: 7.204908, z: 0}
   m_Children: []
   m_Father: {fileID: 1383728108}
@@ -3183,7 +3186,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.05543995, y: 0}
   serializedVersion: 2
-  m_Radius: 2.0610347
+  m_Radius: 5
 --- !u!212 &1574458091
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3588,8 +3591,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.710473, y: -7.5817933}
-  m_Size: {x: 51.27696, y: 69.23613}
+  m_Offset: {x: 3.710473, y: 2}
+  m_Size: {x: 53, y: 95}
   m_Direction: 0
 --- !u!114 &1614256983
 MonoBehaviour:
