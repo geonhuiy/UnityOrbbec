@@ -11,6 +11,8 @@ public class Card : ScriptableObject
     public Sprite cardImage;
     public CardType cardType;
 }
+
+// enum of Cardtype, consisting of all the game objects
 public enum CardType
 {
     Parsakaali, Kahvinkeitin, Banaani, Viini, Ruusu, Perunat, Grilli, Mustikka, Suklaa, Kala, Salaatti, Olut, Öljy, Appelsiini, Ruisleipä, Mansikka, Tomaatti, Puulusikka

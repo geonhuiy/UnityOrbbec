@@ -31,8 +31,9 @@ public class TutorialNextButton : MonoBehaviour
             hoverTime += Time.deltaTime;
             //Debug.Log(hoverTime);
 
-            // when hover time goes over max hover time, stop checking for hover and start the check 
-            // answer progress, the stop is to stop the check answer function getting called repeatedly
+            // when hover time goes over max hover time, stop checking for hover and start the transition
+            // to the the next tutorial
+            // hoverTime reset to 0 to stop the check answer function getting called repeatedly
             if(hoverTime >= maxHoverTime) {
                 isHovering = false;
                 hoverTime = 0;

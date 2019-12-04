@@ -45,13 +45,13 @@ public class CardCollision : MonoBehaviour
     // Keep updating the scale of a card objects according to the isHovering status in each frame
     private void Update()
     {
-        //Vector2 normalScale = new Vector2(transform.position.x, transform.position.y);
+        // Vector2 normalScale = new Vector2(transform.position.x, transform.position.y);
 
         if (isHovering)
         {
             transform.localScale = Vector2.Lerp(transform.localScale, newScale, speed * Time.deltaTime);
             hoverTime += Time.deltaTime;
-            //Debug.Log(hoverTime);
+            // Debug.Log(hoverTime);
 
             // when hover time goes over max hover time, stop checking for hover and start the check 
             // answer progress, the stop is to stop the check answer function getting called repeatedly

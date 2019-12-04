@@ -2,21 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// end button is the button that appears after the game round is finished
+// when player hovers over it it should start the game over
 public class EndButtonScript : MonoBehaviour
 {
-    // Start is called before the first frame update
     private float hoverTime = 0;
     private bool isHovering = false;
     private float maxHoverTime = 3.0f;
     public Canvas endGameCanvas, cardCanvas;
-    // Start is called before the first frame update
 
+    // newScale is the maximum scaling of the button when player hovers over the button
     private Vector2 newScale = new Vector2(20f, 20f);
+    // normalScale is the scale of the button when left untouched by the player
     private Vector2 normalScale = new Vector2(15f, 15f);
     private float speed = 3.0f;
 
+    // triggered when another 2D trigger collider enters the object collider
     private void OnTriggerEnter2D(Collider2D collision)
-    {
+    {   
+        // when the collided object's tag is handObject
+        // start the colliding event by setting 'isHovering' to 'true'
         if (collision.gameObject.tag == "handObject")
         {
             isHovering = true;
@@ -36,7 +41,7 @@ public class EndButtonScript : MonoBehaviour
 
     void Update()
     {
-
+        // the hovering event
         if (isHovering)
         {
             hoverTime += Time.deltaTime;
