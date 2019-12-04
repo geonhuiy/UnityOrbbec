@@ -2417,7 +2417,7 @@ MonoBehaviour:
   torsoRenderer: {fileID: 2051070464}
   leftHand: {fileID: 5113810}
   rightHand: {fileID: 1614256981}
-  calibrationValue: 0
+  calibrationValue: 10
   JointPrefab: {fileID: 100000, guid: 1190a34979a38ae4db353c77e7cd2281, type: 3}
   JointRoot: {fileID: 0}
   ToggleSeg: {fileID: 0}
