@@ -13,7 +13,7 @@ public class AdvancedSkeletonRenderer : MonoBehaviour
     public Transform rightHand;
     // calibration value is used to calirate the coefficient of the the range of movement of the user
     // which allows the user to move more naturally in the game.
-    public float calibrationValue;
+    public float calibrationValue = 10;
     private long _lastFrameIndex = -1;
 
     private Astra.Body[] _bodies;
