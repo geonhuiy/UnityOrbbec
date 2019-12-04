@@ -133,7 +133,7 @@ public class CardManager : MonoBehaviour
     private void EndRound()
     {
         // end round is display answer result and feedback to player
-        if (guessCount < 5)
+        if (guessCount < 5  )
         {
             // start the next round
             AssignSprites();
