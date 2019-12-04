@@ -25,7 +25,7 @@ public class CardManager : MonoBehaviour
     private Card[] cardNames;
     [SerializeField]
     private Text randomText;
-    private List<string> currentCardName = new List<string>();
+    public List<string> currentCardName = new List<string>();
     public int selectedCard;
     private int correctCard;
     private int guessCount = 0;
@@ -133,7 +133,7 @@ public class CardManager : MonoBehaviour
     private void EndRound()
     {
         // end round is display answer result and feedback to player
-        if (guessCount < 2)
+        if (guessCount < 8)
         {
             // start the next round
             AssignSprites();
