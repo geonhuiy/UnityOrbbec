@@ -8,6 +8,8 @@
    * [Setting up GitLab for Continuous Integration](#setting-up-gitlab-for-continuous-integration)  
    * [Testing Game Environment With a Mouse](#testing-game-environment-with-a-mouse)  
  * [Deployment](#deployment)  
+   * [Exporting Project From Unity](#open-the-project-in-unity)
+   * [Importing & Configuring Project in Android Studio](#open-the-exported-project-in-android-studio)
  * [Licensing](#licensing)  
  
 ## Getting Started  
@@ -32,7 +34,7 @@
   
   
 ### Installing  
- - Clone the repo to your local machine  
+ - Clone the repo to your local machine.  
  ```git clone https://github.com/geonhuiy/UnityOrbbec.git```
 
 ## Running Tests
@@ -50,14 +52,21 @@
   - Expand the ```HandCanvas``` and select either ```LeftHand``` or ```RightHand``` and enable the ```Attach``` script on the right side    of the editor to be able to control the hand with the mouse.  
   
 ## Deployment  
-1. Open the project in Unity.
+### 1. Open the project in Unity.
   - Select: ```File - Build Settings```.
   - Ensure that ```Export project``` option is checked.
   - Click on ```Player Settings``` and check that ```Target API Level``` under ```Other settings - Identification``` is set to ```Android 5.1 'Lollipop' (API Level 22)```.
   - Export the project.
   
-2. Open the exported project on Android Studio.
-  - Ensure that corresponding Android SDK is installed on Android Studio.  
+### 2. Open the exported project on Android Studio.
+  - Ensure that corresponding Android SDK is installed on Android Studio. 
+  - Navigate and open the exported project.
+  - Remove/edit following lines from files:
+      ** AndroidManifest.xml
+      REMOVE
+      ```<uses-sdk android:minSdkVersion="19" />```  
+      ```<android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />```  
+      
 
 ## Licensing  
 Placeholder
