@@ -10,6 +10,7 @@
  * [Deployment](#deployment)  
    * [Exporting Project From Unity](#exporting-project-from-unity)
    * [Importing & Configuring Project in Android Studio](#importing-&-configuring-project-in-android-studio)
+   * [Deploying & Installing via Cloud Storage](#deploying-&-installing-via-cloud-storage)  
  * [Licensing](#licensing)  
  
 ## Getting Started  
@@ -63,9 +64,31 @@
   - Navigate and open the exported project.
   - Remove/edit following lines from files :  
       #### AndroidManifest.xml  
-      REMOVE  
+      ##### Remove :  
       ```<uses-sdk android:minSdkVersion="19" />```    
       ```<android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />```  
+      
+      #### build.gradle  
+      ##### Remove :  
+      ```
+      packagingOptions {
+        doNotStrip '*/armeabi-v7a/*.so'
+      }
+      (Under defaultConfig) ndk {
+        abiFilters 'armeabi-v7a'
+      }
+      ```  
+      
+      ##### Edit :  
+      ```
+      targetSdkVersion targetVersionHere -> 26
+      ```  
+      
+  - Sync Gradle files and build the APK under ```Build - Build Bundle(s) / APK(s)```  
+  
+### 3. Deploying & Installing via Cloud Storage
+   - Locate the built APK and upload it to a cloud storage of choice ([Google Drive](https://www.google.com/drive/) recommended).    
+   - Download from the Orbbec Persee and install.  
       
 
 ## Licensing  
