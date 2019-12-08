@@ -36,7 +36,7 @@
   
 ### Installing  
  - Clone the repo to your local machine.  
- ```git clone https://github.com/geonhuiy/UnityOrbbec.git```
+ `git clone https://github.com/geonhuiy/UnityOrbbec.git`
 
 ## Running Tests
 ### Setting up GitLab for Continuous Integration
@@ -49,14 +49,14 @@
     > Choose 'shell' for executor when prompt during Runner registration  
     
 ### Testing Game Environment With a Mouse
-  - After opening the project on Unity, navigate to ```HandCanvas``` on the editor located on the left side.  
-  - Expand the ```HandCanvas``` and select either ```LeftHand``` or ```RightHand``` and enable the ```Attach``` script on the right side    of the editor to be able to control the hand with the mouse.  
+  - After opening the project on Unity, navigate to `HandCanvas` on the editor located on the left side.  
+  - Expand the `HandCanvas` and select either `LeftHand` or `RightHand` and enable the `Attach` script on the right side of the editor to be able to control the hand with the mouse.  
   
 ## Deployment  
 ### 1. Exporting Project From Unity.
-  - Select: ```File - Build Settings```.
-  - Ensure that ```Export project``` option is checked.
-  - Click on ```Player Settings``` and check that ```Target API Level``` under ```Other settings - Identification``` is set to ```Android 5.1 'Lollipop' (API Level 22)```.
+  - Select: `File - Build Settings`.
+  - Ensure that `Export project` option is checked.
+  - Click on `Player Settings` and check that `Target API Level` under `Other settings - Identification` is set to `Android 5.1 'Lollipop' (API Level 22)`.
   - Export the project.
   
 ### 2. Importing & Configuring Project in Android Studio.
@@ -65,8 +65,8 @@
   - Remove/edit following lines from files :  
       #### AndroidManifest.xml  
       ##### Remove :  
-      ```<uses-sdk android:minSdkVersion="19" />```    
-      ```<android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />```  
+      `<uses-sdk android:minSdkVersion="19" />`        
+      `<android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />`     
       
       #### build.gradle  
       ##### Remove :  
@@ -80,11 +80,9 @@
       ```  
       
       ##### Edit :  
-      ```
-      targetSdkVersion targetVersionHere -> 26
-      ```  
+      `targetSdkVersion targetVersionHere -> 26`  
       
-  - Sync Gradle files and build the APK under ```Build - Build Bundle(s) / APK(s)```  
+  - Sync Gradle files and build the APK under `Build - Build Bundle(s) / APK(s)`.  
   
 ### 3. Deploying & Installing via Cloud Storage
    - Locate the built APK and upload it to a cloud storage of choice ([Google Drive](https://www.google.com/drive/) recommended).    
