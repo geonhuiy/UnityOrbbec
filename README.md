@@ -24,6 +24,9 @@
   After the installation is complete, open Unity Hub and add Unity 2019.2.12f1 under Installs - Add.  
   Add "Android Build Support" module.
   
+  - Android Studio (for building a working apk)
+  >https://developer.android.com/studio
+  
   
   
 ### Installing  
@@ -41,4 +44,8 @@
     > Choose 'shell' for executor when prompt during Runner registration  
     
 ## Deployment  
-Placeholder  
+1. Open the project in Unity.
+  - Select: ```File - Build Settings```.
+  - Ensure that ```Export project``` option is checked.
+  - Click on ```Player Settings``` and check that ```Target API Level``` under ```Other settings - Identification``` is set to ```Android 5.1 'Lollipop' (API Level 22)```.
+  
