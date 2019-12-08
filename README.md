@@ -62,7 +62,7 @@
   - Ensure that corresponding Android SDK is installed on Android Studio. 
   - Navigate and open the exported project.
   - Remove/edit following lines from files :  
-      -AndroidManifest.xml  
+      #### AndroidManifest.xml  
       REMOVE  
       ```<uses-sdk android:minSdkVersion="19" />```    
       ```<android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />```  
