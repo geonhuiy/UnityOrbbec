@@ -7,6 +7,7 @@
  * [Running Tests](#running-tests)
    * [Setting up GitLab for Continuous Integration](#setting-up-gitlab-for-continuous-integration)
  * [Deployment](#deployment)  
+ * [Licensing](#licensing)  
  
 ## Getting Started  
 ### Prerequisites   
@@ -43,9 +44,20 @@
     > Runner tags should include 'Unity' and/or 'Orbbec'  
     > Choose 'shell' for executor when prompt during Runner registration  
     
+### Testing Game Environment With a Mouse
+  - After opening the project on Unity, navigate to ```HandCanvas``` on the editor located on the left side.  
+  - Expand the ```HandCanvas``` and select either ```LeftHand``` or ```RightHand``` and enable the ```Attach``` script on the right side    of the editor to be able to control the hand with the mouse.  
+  
 ## Deployment  
 1. Open the project in Unity.
   - Select: ```File - Build Settings```.
   - Ensure that ```Export project``` option is checked.
   - Click on ```Player Settings``` and check that ```Target API Level``` under ```Other settings - Identification``` is set to ```Android 5.1 'Lollipop' (API Level 22)```.
+  - Export the project.
+  
+2. Open the exported project on Android Studio.
+  - Ensure that corresponding Android SDK is installed on Android Studio.  
+
+## Licensing  
+Placeholder
   
