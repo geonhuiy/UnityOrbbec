@@ -32,5 +32,12 @@ namespace Tests
             CardManager.instance.ResetGame();
             Assert.True(CardManager.instance.generatedCardCount == 3);
         }
+
+        [UnityTest]
+        public IEnumerator placeHolder2() {
+            yield return 10;
+            CardManager.instance.ResetGame();
+            Assert.True(CardManager.instance.generatedCardCount == 3);
+        }
     }
 }
