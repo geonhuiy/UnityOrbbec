@@ -3,18 +3,41 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
+using UnityEditor;
+using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 namespace Tests
 {
     
     public class TestSuite
     {
-        private HandManager handManager;
-        private CardManager cardManager;
+        [SetUp]
+        public void ResetScene() {
+            SceneManager.LoadScene("DemoScene");
+            
+        }
+
         [UnityTest]
-        public IEnumerator GenerateCards() {
-            CardManager.instance.AssignSprites();
-            yield return CardManager.instance.currentCardName.Count;
-            Assert.True(CardManager.instance.currentCardName != null);
+        public IEnumerator CheckGeneratedCardCount()
+        {
+            // Use the Assert class to test conditions.
+            // Use yield to skip a frame.
+            yield return 10;
+            Assert.True(CardManager.instance.generatedCardCount == 3);
+        }
+
+        [UnityTest]
+        public IEnumerator placeHolder() {
+            yield return 10;
+            CardManager.instance.ResetGame();
+            Assert.True(CardManager.instance.generatedCardCount == 3);
+        }
+
+        [UnityTest]
+        public IEnumerator placeHolder2() {
+            yield return 10;
+            CardManager.instance.ResetGame();
+            Assert.True(CardManager.instance.generatedCardCount == 3);
         }
     }
 }

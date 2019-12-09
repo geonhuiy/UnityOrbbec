@@ -8,16 +8,13 @@ public class CardManager : MonoBehaviour
     //Card manager singleton
     public static CardManager instance;
     public Text scoreDisplay;
-    public Canvas cardCanvas;
-    public GameObject tutorialScreen;
-    public GameObject correctImage, failImage;
-    public GameObject leftHand, RightHand;
+    public Canvas cardCanvas, endGameCanvas;
+    public GameObject correctImage, failImage, leftHand, RightHand;
+
     private float feedbackDisplayTime = 2.0f;
     private float feedbackCounter = 0;
-    private bool showWrongAnswerFeedback;
-    private bool showRightAnswerFeedback;
+    private bool showWrongAnswerFeedback, showRightAnswerFeedback;
 
-    private int tutorialCount = 0;
     //Placeholder empty GameObjects in the scene
     [SerializeField]
     private GameObject[] placeholders;
@@ -26,13 +23,10 @@ public class CardManager : MonoBehaviour
     [SerializeField]
     private Text randomText;
     public List<string> currentCardName = new List<string>();
-    public int selectedCard;
+    public int selectedCard, generatedCardCount;
     private int correctCard;
-    private int guessCount = 0;
-
-    public Canvas endGameCanvas;
+    private int guessCount, score = 0;
     public Text resultText;
-    private int score = 0;
 
     void Awake()
     {
@@ -133,7 +127,7 @@ public class CardManager : MonoBehaviour
     private void EndRound()
     {
         // end round is display answer result and feedback to player
-        if (guessCount < 5  )
+        if (guessCount < 5)
         {
             // start the next round
             AssignSprites();
@@ -199,6 +193,7 @@ public class CardManager : MonoBehaviour
             //add name of randcard to card name list for display
             currentCardName.Add(randCard.cardType.ToString());
         }
+        generatedCardCount = currentCardName.Count;
         RandomText();
     }
 
