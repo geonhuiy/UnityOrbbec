@@ -14,7 +14,6 @@ namespace Tests
         [SetUp]
         public void ResetScene() {
             SceneManager.LoadScene("DemoScene");
-            
         }
 
         /*[UnityTest]
