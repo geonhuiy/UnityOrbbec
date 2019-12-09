@@ -33,9 +33,14 @@ namespace Tests
             Assert.True(CardManager.instance.generatedCardCount == 3);
         }*/
 
-        [UnityTest]
+        /*[UnityTest]
         public IEnumerator placeHolder2() {
             yield return 10;
+            Assert.Fail();
+        }*/
+
+        [Test]
+        public void test() {
             Assert.Fail();
         }
     }
