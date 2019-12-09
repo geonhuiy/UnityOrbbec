@@ -17,7 +17,7 @@ namespace Tests
             
         }
 
-        [UnityTest]
+        /*[UnityTest]
         public IEnumerator CheckGeneratedCardCount()
         {
             // Use the Assert class to test conditions.
@@ -31,7 +31,7 @@ namespace Tests
             yield return 10;
             CardManager.instance.ResetGame();
             Assert.True(CardManager.instance.generatedCardCount == 3);
-        }
+        }*/
 
         [UnityTest]
         public IEnumerator placeHolder2() {
