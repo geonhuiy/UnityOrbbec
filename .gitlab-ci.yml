@@ -8,7 +8,7 @@ unit-test:
     -projectPath . \
     -runTests -testPlatform playmode \
     -logFile \
-    -testResults ./unit-tests.xml"
+    -nographics \
     tags:
     - Unity
     - Orbbec
