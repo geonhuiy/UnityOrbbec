@@ -6,8 +6,7 @@ unit-test:
     script: "C:\\'Program Files'\\Unity\\Hub\\Editor\\2019.2.12f1\\Editor\\Unity.exe \
     -projectPath . \
     -runTests \
-    -logFile \
-    -testPlatform playmode"
+    -logFile"
     tags:
     - Unity
     - Orbbec
