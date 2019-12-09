@@ -1,18 +1,21 @@
 stages:
-  - test
-  - build
+    - test
+    - build
 unit-test:
-  stage: test
-  script: echo 'Testing'
-  tags: 
+    stage: test
+    script: "C:\\Program Files\\Unity\\Hub\\Editor\\2019.2.12f1\\Editor\\Unity.exe \
+    -batchmode \
+    -projectPath . \
+    -runTests -testPlatform playmode \
+    -logFile \
+    -testResults ./unit-tests.xml"
+    tags:
     - Unity
     - Orbbec
 
 unity-build:
-  stage: build
-  script: echo 'Building'
-  tags: 
+    stage: build
+    script: echo 'Building'
+    tags:
     - Unity
     - Orbbec
-
-
