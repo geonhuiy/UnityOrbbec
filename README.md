@@ -1,7 +1,7 @@
 # UnityOrbbec
 > Project repository for a Unity-based 3-D motion controlled game/platform designed for the elderly. This project is designed to run on the Orbbec Persee (check under prerequisites).  
 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/w/geonhuiy/UnityOrbbec) ![GitHub last commit](https://img.shields.io/github/last-commit/geonhuiy/UnityOrbbec) ![GitHub contributors](https://img.shields.io/github/contributors/geonhuiy/UnityOrbbec) ![GitHub All Releases](https://img.shields.io/github/downloads/geonhuiy/UnityOrbbec/total) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![GitHub last commit](https://img.shields.io/github/last-commit/geonhuiy/UnityOrbbec) ![GitHub contributors](https://img.shields.io/github/contributors/geonhuiy/UnityOrbbec) ![GitHub All Releases](https://img.shields.io/github/downloads/geonhuiy/UnityOrbbec/total) ![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/geonhuiy/UnityOrbbec) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of Contents  
  * [Getting Started](#getting-started)   
