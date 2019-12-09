@@ -41,16 +41,7 @@
  - Clone the repo to your local machine.  
  `git clone https://github.com/geonhuiy/UnityOrbbec.git`
 
-## Running Tests
-### Setting up GitLab for Continuous Integration
-1. Setting up GitLab Runner
-  - Install GitLab Runner on GNU/Linux, macOS, FreeBSD, Windows. Detailed instructions can be found under:  
-    > https://docs.gitlab.com/runner/install/  
-  - Register installed Runner  
-    > https://docs.gitlab.com/runner/register/  
-    > Runner tags should include 'Unity' and/or 'Orbbec'  
-    > Choose 'shell' for executor when prompt during Runner registration  
-    
+## Running Tests  
 ### Testing Game Environment With a Mouse
   - After opening the project on Unity, navigate to `HandCanvas` on the editor located on the left side.  
   - Expand the `HandCanvas` and select either `LeftHand` or `RightHand` and enable the `Attach` script on the right side of the editor to be able to control the hand with the mouse.  
