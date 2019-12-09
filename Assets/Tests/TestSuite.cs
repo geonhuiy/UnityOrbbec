@@ -36,8 +36,7 @@ namespace Tests
         [UnityTest]
         public IEnumerator placeHolder2() {
             yield return 10;
-            CardManager.instance.ResetGame();
-            Assert.True(CardManager.instance.generatedCardCount == 3);
+            Assert.Fail();
         }
     }
 }

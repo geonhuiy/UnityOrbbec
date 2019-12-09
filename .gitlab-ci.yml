@@ -3,7 +3,7 @@ stages:
     - build
 unit-test:
     stage: test
-    script: "C:\\Program Files\\Unity\\Hub\\Editor\\2019.2.12f1\\Editor\\Unity.exe \
+    script: "C:\\'Program Files'\\Unity\\Hub\\Editor\\2019.2.12f1\\Editor\\Unity.exe \
     -batchmode \
     -projectPath . \
     -runTests -testPlatform playmode \
