@@ -16,7 +16,8 @@ This project was developed by students of [Metropolia](https://www.metropolia.fi
  * [Deployment](#deployment)  
    * [Exporting Project From Unity](#exporting-project-from-unity)
    * [Importing & Configuring Project in Android Studio](#importing-&-configuring-project-in-android-studio)
-   * [Deploying & Installing via Cloud Storage](#deploying-&-installing-via-cloud-storage)  
+   * [Deploying & Installing via Cloud Storage](#deploying-&-installing-via-cloud-storage) 
+ * [Game Features](#game-features)  
  * [Licensing](#licensing)  
  
 ## Getting Started  
@@ -85,6 +86,8 @@ This project was developed by students of [Metropolia](https://www.metropolia.fi
    - Locate the built APK and upload it to a cloud storage of choice ([Google Drive](https://www.google.com/drive/) recommended).    
    - Download from the Orbbec Persee and install.  
       
+## Game Features  
+placeholder  
 
 ## Licensing  
 This project is licensed under the MIT license - see [LICENSE.md](LICENSE.md) for more details.
