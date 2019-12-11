@@ -1,6 +1,8 @@
 # UnityOrbbec
 > Project repository for a Unity-based 3-D motion controlled game/platform designed for the elderly. This project is designed to run on the Orbbec Persee (check under prerequisites).  
 
+This project was developed by students of [Metropolia](https://www.metropolia.fi/) for [Physilect](https://physilect.com/), in collaboration with [Hippa Metropolia](https://hippa.metropolia.fi/).
+
 ![GitHub last commit](https://img.shields.io/github/last-commit/geonhuiy/UnityOrbbec?color=blue) ![GitHub contributors](https://img.shields.io/github/contributors/geonhuiy/UnityOrbbec?color=blue) ![GitHub All Releases](https://img.shields.io/github/downloads/geonhuiy/UnityOrbbec/total) ![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/geonhuiy/UnityOrbbec?color=blue&label=GitLab%20build) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of Contents  
