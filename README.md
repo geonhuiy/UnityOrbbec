@@ -12,7 +12,6 @@ This project was developed by students of [Metropolia](https://www.metropolia.fi
    * [Prerequisites](#prerequisites)  
    * [Installing](#installing)
  * [Running Tests](#running-tests)
-   * [Setting up GitLab for Continuous Integration](#setting-up-gitlab-for-continuous-integration)  
    * [Testing Game Environment With a Mouse](#testing-game-environment-with-a-mouse)  
  * [Deployment](#deployment)  
    * [Exporting Project From Unity](#exporting-project-from-unity)
