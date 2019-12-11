@@ -1,4 +1,4 @@
-# UnityOrbbec
+# Kitchen Cards, A 3D Motion Controlled Game For The Elderly
 > Project repository for a Unity-based 3-D motion controlled game/platform designed for the elderly. This project is designed to run on the Orbbec Persee (check under prerequisites).  
 
 This project was developed by students of [Metropolia](https://www.metropolia.fi/) for [Physilect](https://physilect.com/), in collaboration with [Hippa Metropolia](https://hippa.metropolia.fi/).  
