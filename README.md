@@ -87,7 +87,7 @@ This project was developed by students of [Metropolia](https://www.metropolia.fi
    - Download from the Orbbec Persee and install.  
       
 ## Game Features  
-placeholder  
+![gameplay](https://github.com/geonhuiy/UnityOrbbec/blob/master/kitchencard-gameplay.gif) 
 
 ## Licensing  
 This project is licensed under the MIT license - see [LICENSE.md](LICENSE.md) for more details.
